@@ -87,7 +87,7 @@ OptiCycle is an app that aims to make recycling smarter. It is able to categoriz
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://imgur.com/a/sX9A9bp" width=600>
+<img src="//imgur.com/a/sX9A9bp" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
