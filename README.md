@@ -109,21 +109,22 @@ OptiCycle is an app that aims to make recycling smarter. It is able to categoriz
 
 - Login Screen
   - (Read/GET) Query user's login credentials 
-  ```md
-  let query = PFQuery(className:"User")
-  query.whereKey("username", equalTo:"User's Name")
-  query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
-      if let error = error {
-          // Log details of the failure
-          // User doesn't have a profile, should sign up
-          print(error.localizedDescription)
-      } else if let objects = objects {
-          // The find succeeded.
-          print("Successfully retrieved user's info.")
-          // log user in and display home feed
-      }
-  }
-  ```
+    ```md
+    let query = PFQuery(className:"User")
+    query.whereKey("username", equalTo:"User's Name")
+    query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+        if let error = error {
+            // Log details of the failure
+            // User doesn't have a profile, should sign up
+            print(error.localizedDescription)
+        } else if let objects = objects {
+            // The find succeeded.
+            print("Successfully retrieved user's info.")
+            // log user in and display home feed
+        }
+    }
+    ```
+    
 - Home Screen
   - (Read/GET) Query all posts where user is author 
     ```md
@@ -156,54 +157,56 @@ OptiCycle is an app that aims to make recycling smarter. It is able to categoriz
     }
     ```
   - (Update/PUT) Update user's posts count
-  ```md
-  let query = PFQuery(className:"Profile")
-  query.getObjectInBackground(withId: "xWMyZEGZ") { (profile: PFObject?, error: Error?) in
-      if let error = error {
-          print(error.localizedDescription)
-      } else if let profile = profile {
-          profile["postCount"] += 1
-          profile.saveInBackground()
-      }
-  }
-  ```
+    ```md
+    let query = PFQuery(className:"Profile")
+    query.getObjectInBackground(withId: "xWMyZEGZ") { (profile: PFObject?, error: Error?) in
+        if let error = error {
+            print(error.localizedDescription)
+        } else if let profile = profile {
+            profile["postCount"] += 1
+            profile.saveInBackground()
+        }
+    }
+    ```
+    
 - Profile Screen
   - (Read/GET) Query logged in user object
-  ```md
-  let query = PFQuery(className:"Profile")
-  query.whereKey("author", equalTo: currentUser)
-  query.findObjectsInBackground { (profile: [PFObject]?, error: Error?) in
-     if let error = error { 
-        print(error.localizedDescription)
-     } else if let profile = profile {
-        print("Successfully retrieved profile.")
-    // TODO: Do something with profile...
-     }
-  }
-  ```
-  - (Update/PUT) Update user profile image
-  ```md
-  let query = PFQuery(className:"Profile")
-  query.getObjectInBackground(withId: "xWMyZEGZ") { (profile: PFObject?, error: Error?) in
-      if let error = error {
+    ```md
+    let query = PFQuery(className:"Profile")
+    query.whereKey("author", equalTo: currentUser)
+    query.findObjectsInBackground { (profile: [PFObject]?, error: Error?) in
+       if let error = error { 
           print(error.localizedDescription)
-      } else if let profile = profile {
-          profile["userImage"] = file
-          profile.saveInBackground()
-      }
-  }
-  ```
+       } else if let profile = profile {
+          print("Successfully retrieved profile.")
+      // TODO: Do something with profile...
+       }
+    }
+    ```
+  - (Update/PUT) Update user profile image
+    ```md
+    let query = PFQuery(className:"Profile")
+    query.getObjectInBackground(withId: "xWMyZEGZ") { (profile: PFObject?, error: Error?) in
+        if let error = error {
+            print(error.localizedDescription)
+        } else if let profile = profile {
+            profile["userImage"] = file
+            profile.saveInBackground()
+        }
+    }
+    ```
+    
 - Community Guidlines Screen
   - (Read/GET) Recycling Guildline's for user's town from website
-  ```md
-  let url = URL(string: "http://www.someWebsite.com")!
-  var request = URLRequest(url: url)
-  request.httpMethod = "POST" 
-  NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
-    guard let data = data else { return }
-    // TODO: Do something with url...
-  }
-  ```
+    ```md
+    let url = URL(string: "http://www.someWebsite.com")!
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST" 
+    NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
+      guard let data = data else { return }
+      // TODO: Do something with url...
+    }
+    ```
 
 
 
