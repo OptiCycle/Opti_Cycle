@@ -96,6 +96,11 @@ OptiCycle is an app that aims to make recycling smarter. It is able to categoriz
 [This section will be completed in Unit 9]
 ### Models
 [Add table of models]
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
