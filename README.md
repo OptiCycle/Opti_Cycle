@@ -115,7 +115,7 @@ OptiCycle is an app that aims to make recycling smarter. It is able to categoriz
   - (Read/GET) Query user's login credentials 
 - Home Screen
   - (Read/GET) Query all posts where user is author
-  - let query = PFQuery(className:"Post")
+    let query = PFQuery(className:"Post")
     query.whereKey("author", equalTo: currentUser)
     query.order(byDescending: "createdAt")
     query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
