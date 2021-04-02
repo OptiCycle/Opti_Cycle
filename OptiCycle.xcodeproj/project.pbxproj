@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E50B2B75E735B2937961210 /* Pods_OptiCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2021AD562B407724DAC738B /* Pods_OptiCycle.framework */; };
+		2B1B8F802616937F00C69AC4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B8F7F2616937F00C69AC4 /* LoginViewController.swift */; };
+		2B1B8F922616980B00C69AC4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B8F912616980B00C69AC4 /* FeedViewController.swift */; };
+		2B1B8F982616991C00C69AC4 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B8F972616991C00C69AC4 /* PostCell.swift */; };
 		2B98EC9F260D5BB2003AB521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98EC9E260D5BB2003AB521 /* AppDelegate.swift */; };
 		2B98ECA1260D5BB2003AB521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECA0260D5BB2003AB521 /* SceneDelegate.swift */; };
 		2B98ECA3260D5BB2003AB521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECA2260D5BB2003AB521 /* ViewController.swift */; };
@@ -15,6 +19,8 @@
 		2B98ECAB260D5BB2003AB521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA9260D5BB2003AB521 /* LaunchScreen.storyboard */; };
 		2B98ECB6260D5BB3003AB521 /* OptiCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECB5260D5BB3003AB521 /* OptiCycleTests.swift */; };
 		2B98ECC1260D5BB3003AB521 /* OptiCycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECC0260D5BB3003AB521 /* OptiCycleUITests.swift */; };
+		7D67D55B87FD53ACCE719CCA /* Pods_OptiCycle_OptiCycleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4362688FDDB0DE296B90D35 /* Pods_OptiCycle_OptiCycleUITests.framework */; };
+		E7041557FB3551E23465DB55 /* Pods_OptiCycleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02914F4FB4CAB18B2CDB528A /* Pods-OptiCycleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycleTests.release.xcconfig"; path = "Target Support Files/Pods-OptiCycleTests/Pods-OptiCycleTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B1B8F7F2616937F00C69AC4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2B1B8F912616980B00C69AC4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		2B1B8F972616991C00C69AC4 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		2B98EC9B260D5BB2003AB521 /* OptiCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptiCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B98EC9E260D5BB2003AB521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B98ECA0260D5BB2003AB521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,14 @@
 		2B98ECBC260D5BB3003AB521 /* OptiCycleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptiCycleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B98ECC0260D5BB3003AB521 /* OptiCycleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptiCycleUITests.swift; sourceTree = "<group>"; };
 		2B98ECC2260D5BB3003AB521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AF07442642DCE88E1946CE3 /* Pods-OptiCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle/Pods-OptiCycle.release.xcconfig"; sourceTree = "<group>"; };
+		74D2F5B10DCB5AF32AB7E24F /* Pods-OptiCycle-OptiCycleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8446DA0995105CEAC89EA1FB /* Pods-OptiCycleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycleTests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycleTests/Pods-OptiCycleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6BDF389C9C6232B966AB222 /* Pods-OptiCycle-OptiCycleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2021AD562B407724DAC738B /* Pods_OptiCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1C92E349200601AB3ADDD1 /* Pods-OptiCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycle/Pods-OptiCycle.debug.xcconfig"; sourceTree = "<group>"; };
+		E4362688FDDB0DE296B90D35 /* Pods_OptiCycle_OptiCycleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycle_OptiCycleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E50B2B75E735B2937961210 /* Pods_OptiCycle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7041557FB3551E23465DB55 /* Pods_OptiCycleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +90,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D67D55B87FD53ACCE719CCA /* Pods_OptiCycle_OptiCycleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C20F8FB8154CA536F9C304F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2021AD562B407724DAC738B /* Pods_OptiCycle.framework */,
+				E4362688FDDB0DE296B90D35 /* Pods_OptiCycle_OptiCycleUITests.framework */,
+				C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15E25C8379BE72BED27E519E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE1C92E349200601AB3ADDD1 /* Pods-OptiCycle.debug.xcconfig */,
+				3AF07442642DCE88E1946CE3 /* Pods-OptiCycle.release.xcconfig */,
+				74D2F5B10DCB5AF32AB7E24F /* Pods-OptiCycle-OptiCycleUITests.debug.xcconfig */,
+				B6BDF389C9C6232B966AB222 /* Pods-OptiCycle-OptiCycleUITests.release.xcconfig */,
+				8446DA0995105CEAC89EA1FB /* Pods-OptiCycleTests.debug.xcconfig */,
+				02914F4FB4CAB18B2CDB528A /* Pods-OptiCycleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2B1B8F732616913E00C69AC4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2B1B8F7F2616937F00C69AC4 /* LoginViewController.swift */,
+				2B1B8F912616980B00C69AC4 /* FeedViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2B1B8F962616990700C69AC4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2B1B8F972616991C00C69AC4 /* PostCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		2B98EC92260D5BB2003AB521 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +144,8 @@
 				2B98ECB4260D5BB2003AB521 /* OptiCycleTests */,
 				2B98ECBF260D5BB3003AB521 /* OptiCycleUITests */,
 				2B98EC9C260D5BB2003AB521 /* Products */,
+				15E25C8379BE72BED27E519E /* Pods */,
+				0C20F8FB8154CA536F9C304F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +162,8 @@
 		2B98EC9D260D5BB2003AB521 /* OptiCycle */ = {
 			isa = PBXGroup;
 			children = (
+				2B1B8F962616990700C69AC4 /* Cells */,
+				2B1B8F732616913E00C69AC4 /* ViewControllers */,
 				2B98EC9E260D5BB2003AB521 /* AppDelegate.swift */,
 				2B98ECA0260D5BB2003AB521 /* SceneDelegate.swift */,
 				2B98ECA2260D5BB2003AB521 /* ViewController.swift */,
@@ -135,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B98ECC5260D5BB3003AB521 /* Build configuration list for PBXNativeTarget "OptiCycle" */;
 			buildPhases = (
+				64FAB66F4D1B65A54C4A2E0C /* [CP] Check Pods Manifest.lock */,
 				2B98EC97260D5BB2003AB521 /* Sources */,
 				2B98EC98260D5BB2003AB521 /* Frameworks */,
 				2B98EC99260D5BB2003AB521 /* Resources */,
+				EDB64DA866C28E5DD52C5148 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B98ECC8260D5BB3003AB521 /* Build configuration list for PBXNativeTarget "OptiCycleTests" */;
 			buildPhases = (
+				C4E6268E164553C1D6FBEDF9 /* [CP] Check Pods Manifest.lock */,
 				2B98ECAD260D5BB2003AB521 /* Sources */,
 				2B98ECAE260D5BB2003AB521 /* Frameworks */,
 				2B98ECAF260D5BB2003AB521 /* Resources */,
@@ -170,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B98ECCB260D5BB3003AB521 /* Build configuration list for PBXNativeTarget "OptiCycleUITests" */;
 			buildPhases = (
+				01CC213D21358F9394BA1030 /* [CP] Check Pods Manifest.lock */,
 				2B98ECB8260D5BB3003AB521 /* Sources */,
 				2B98ECB9260D5BB3003AB521 /* Frameworks */,
 				2B98ECBA260D5BB3003AB521 /* Resources */,
+				F62668397AB966A657D67744 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,14 +323,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01CC213D21358F9394BA1030 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OptiCycle-OptiCycleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64FAB66F4D1B65A54C4A2E0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OptiCycle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4E6268E164553C1D6FBEDF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OptiCycleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDB64DA866C28E5DD52C5148 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OptiCycle/Pods-OptiCycle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OptiCycle/Pods-OptiCycle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OptiCycle/Pods-OptiCycle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F62668397AB966A657D67744 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B98EC97260D5BB2003AB521 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1B8F802616937F00C69AC4 /* LoginViewController.swift in Sources */,
 				2B98ECA3260D5BB2003AB521 /* ViewController.swift in Sources */,
+				2B1B8F922616980B00C69AC4 /* FeedViewController.swift in Sources */,
 				2B98EC9F260D5BB2003AB521 /* AppDelegate.swift in Sources */,
 				2B98ECA1260D5BB2003AB521 /* SceneDelegate.swift in Sources */,
+				2B1B8F982616991C00C69AC4 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +609,7 @@
 		};
 		2B98ECC6260D5BB3003AB521 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1C92E349200601AB3ADDD1 /* Pods-OptiCycle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +629,7 @@
 		};
 		2B98ECC7260D5BB3003AB521 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AF07442642DCE88E1946CE3 /* Pods-OptiCycle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +649,7 @@
 		};
 		2B98ECC9260D5BB3003AB521 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8446DA0995105CEAC89EA1FB /* Pods-OptiCycleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +672,7 @@
 		};
 		2B98ECCA260D5BB3003AB521 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02914F4FB4CAB18B2CDB528A /* Pods-OptiCycleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +695,7 @@
 		};
 		2B98ECCC260D5BB3003AB521 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D2F5B10DCB5AF32AB7E24F /* Pods-OptiCycle-OptiCycleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +716,7 @@
 		};
 		2B98ECCD260D5BB3003AB521 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6BDF389C9C6232B966AB222 /* Pods-OptiCycle-OptiCycleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
