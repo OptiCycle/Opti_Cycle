@@ -84,21 +84,44 @@
             </objects>
             <point key="canvasLocation" x="-581" y="1495"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="MYT-eQ-M3H">
             <objects>
-                <viewController id="qVj-Xp-tsA" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="qVj-Xp-tsA" customClass="ProfileViewController" customModule="OptiCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JGW-O6-eVg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPv-GU-ict">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Alz-dY-6or">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="fe8-WR-zYs" kind="embed" identifier="ToProfileSegue" id="Tfq-8m-Qpa"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Alz-dY-6or" firstAttribute="trailing" secondItem="zIB-96-q7E" secondAttribute="trailing" id="57n-Tx-NP7"/>
+                                    <constraint firstItem="Alz-dY-6or" firstAttribute="leading" secondItem="zIB-96-q7E" secondAttribute="leading" id="Kg2-8x-2lH"/>
+                                    <constraint firstItem="zIB-96-q7E" firstAttribute="bottom" secondItem="Alz-dY-6or" secondAttribute="bottom" constant="480" id="OFf-Fy-HYZ"/>
+                                    <constraint firstItem="Alz-dY-6or" firstAttribute="top" secondItem="zIB-96-q7E" secondAttribute="top" constant="56" id="zOf-HL-SmD"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="A0p-Cu-9W8"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="zIB-96-q7E"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="D1e-am-82H"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="pwl-6P-pOH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gG-cZ-WNt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109" y="1495"/>
+            <point key="canvasLocation" x="108.69565217391305" y="1494.6428571428571"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="1G3-kg-QyM">
@@ -126,7 +149,7 @@
                                 <rect key="frame" x="52" y="446" width="259" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSk-za-XuC">
                                 <rect key="frame" x="81" y="536" width="55" height="40"/>
@@ -190,7 +213,7 @@
         <scene sceneID="Yjr-JF-nnT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ytz-W8-IcA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="8GO-vh-Liy"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="8GO-vh-Liy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TAR-32-qgc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -205,11 +228,11 @@
             </objects>
             <point key="canvasLocation" x="-1271.0144927536232" y="787.5"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="qMn-k4-n53">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="n0Q-pA-0gt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="3em-Pp-DVB"/>
+                    <tabBarItem key="tabBarItem" title="" image="map" catalog="system" id="3em-Pp-DVB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1wh-Xt-I80">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -224,11 +247,11 @@
             </objects>
             <point key="canvasLocation" x="-581.15942028985512" y="787.5"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="InD-YB-Oia">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="bhR-kd-VuT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hjv-1k-CgA"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="hjv-1k-CgA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XUp-nu-5nR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -243,10 +266,80 @@
             </objects>
             <point key="canvasLocation" x="108.69565217391305" y="787.5"/>
         </scene>
+        <!--Profile Child View Controller-->
+        <scene sceneID="5ht-NE-BBj">
+            <objects>
+                <viewController id="fe8-WR-zYs" customClass="ProfileChildViewController" customModule="OptiCycle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mJm-Wt-xi6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Sj-ad-dWV">
+                                <rect key="frame" x="124.5" y="71" width="165" height="164"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4lt-lX-opT" appends="YES" id="2lC-Dc-Fst"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mikael Kaufman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1r-R2-Ydh">
+                                <rect key="frame" x="90" y="251" width="234" height="35"/>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aFE-hv-vd5">
+                                <rect key="frame" x="245" y="193.5" width="30" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aFE-hv-vd5" secondAttribute="height" multiplier="1:1" id="jzm-Nd-JWK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.018377283590000001" green="0.35282301900000002" blue="0.98586386439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.094688967779999994" green="0.3104578529" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M1r-R2-Ydh" firstAttribute="leading" secondItem="mJm-Wt-xi6" secondAttribute="leadingMargin" constant="70" id="6Sc-NF-ZZH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="M1r-R2-Ydh" secondAttribute="bottom" constant="20" id="FDL-Y9-qWr"/>
+                            <constraint firstAttribute="bottom" secondItem="5Sj-ad-dWV" secondAttribute="bottom" constant="70.5" id="QdO-rn-icz"/>
+                            <constraint firstAttribute="trailing" secondItem="aFE-hv-vd5" secondAttribute="trailing" constant="139" id="WgL-D2-mCb"/>
+                            <constraint firstItem="5Sj-ad-dWV" firstAttribute="centerX" secondItem="mJm-Wt-xi6" secondAttribute="centerX" id="b24-zn-Ef1"/>
+                            <constraint firstAttribute="trailing" secondItem="5Sj-ad-dWV" secondAttribute="trailing" constant="124.5" id="ftd-10-l1e"/>
+                            <constraint firstItem="aFE-hv-vd5" firstAttribute="top" secondItem="mJm-Wt-xi6" secondAttribute="top" constant="193" id="izD-iO-WHk"/>
+                            <constraint firstItem="M1r-R2-Ydh" firstAttribute="top" secondItem="aFE-hv-vd5" secondAttribute="bottom" constant="28" id="mxy-8b-hX2"/>
+                            <constraint firstItem="aFE-hv-vd5" firstAttribute="leading" secondItem="mJm-Wt-xi6" secondAttribute="leading" constant="245" id="rve-cW-9i7"/>
+                            <constraint firstItem="M1r-R2-Ydh" firstAttribute="top" secondItem="5Sj-ad-dWV" secondAttribute="bottom" constant="15.5" id="t86-BF-MAQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M1r-R2-Ydh" secondAttribute="trailing" constant="70" id="uOv-jS-P4A"/>
+                            <constraint firstItem="5Sj-ad-dWV" firstAttribute="centerY" secondItem="mJm-Wt-xi6" secondAttribute="centerY" id="vTP-aC-hLt"/>
+                            <constraint firstItem="5Sj-ad-dWV" firstAttribute="top" secondItem="mJm-Wt-xi6" secondAttribute="top" constant="70.5" id="yhb-hT-d3Y"/>
+                            <constraint firstItem="5Sj-ad-dWV" firstAttribute="leading" secondItem="mJm-Wt-xi6" secondAttribute="leading" constant="124.5" id="yiF-aO-bhR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="mJm-Wt-xi6" id="AHy-sV-SMl"/>
+                        <outlet property="editProfilePenImage" destination="aFE-hv-vd5" id="Hix-2Q-6DN"/>
+                        <outlet property="profileImage" destination="5Sj-ad-dWV" id="SLj-Kg-jGz"/>
+                        <outlet property="usernameLabel" destination="M1r-R2-Ydh" id="KBb-WG-mnZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1S5-W3-0Qr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4lt-lX-opT">
+                    <connections>
+                        <action selector="onProfileImage:" destination="fe8-WR-zYs" id="If4-E7-6db"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="876.81159420289862" y="1314.5089285714284"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
-        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -19,6 +19,8 @@
 		2B98ECAB260D5BB2003AB521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA9260D5BB2003AB521 /* LaunchScreen.storyboard */; };
 		2B98ECB6260D5BB3003AB521 /* OptiCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECB5260D5BB3003AB521 /* OptiCycleTests.swift */; };
 		2B98ECC1260D5BB3003AB521 /* OptiCycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECC0260D5BB3003AB521 /* OptiCycleUITests.swift */; };
+		736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */; };
+		73E234C42616AF7400F8A326 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E234C32616AF7400F8A326 /* ProfileViewController.swift */; };
 		7D67D55B87FD53ACCE719CCA /* Pods_OptiCycle_OptiCycleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4362688FDDB0DE296B90D35 /* Pods_OptiCycle_OptiCycleUITests.framework */; };
 		E7041557FB3551E23465DB55 /* Pods_OptiCycleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		2B98ECC0260D5BB3003AB521 /* OptiCycleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptiCycleUITests.swift; sourceTree = "<group>"; };
 		2B98ECC2260D5BB3003AB521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AF07442642DCE88E1946CE3 /* Pods-OptiCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle/Pods-OptiCycle.release.xcconfig"; sourceTree = "<group>"; };
+		736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileChildViewController.swift; sourceTree = "<group>"; };
+		73E234C32616AF7400F8A326 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		74D2F5B10DCB5AF32AB7E24F /* Pods-OptiCycle-OptiCycleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8446DA0995105CEAC89EA1FB /* Pods-OptiCycleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycleTests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycleTests/Pods-OptiCycleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6BDF389C9C6232B966AB222 /* Pods-OptiCycle-OptiCycleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			children = (
 				2B1B8F7F2616937F00C69AC4 /* LoginViewController.swift */,
 				2B1B8F912616980B00C69AC4 /* FeedViewController.swift */,
+				73E234C32616AF7400F8A326 /* ProfileViewController.swift */,
+				736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -435,7 +441,9 @@
 				2B98ECA3260D5BB2003AB521 /* ViewController.swift in Sources */,
 				2B1B8F922616980B00C69AC4 /* FeedViewController.swift in Sources */,
 				2B98EC9F260D5BB2003AB521 /* AppDelegate.swift in Sources */,
+				73E234C42616AF7400F8A326 /* ProfileViewController.swift in Sources */,
 				2B98ECA1260D5BB2003AB521 /* SceneDelegate.swift in Sources */,
+				736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */,
 				2B1B8F982616991C00C69AC4 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

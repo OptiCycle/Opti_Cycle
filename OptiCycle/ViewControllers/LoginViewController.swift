@@ -40,6 +40,15 @@ class LoginViewController: UIViewController {
         let user = PFUser()
         user.username = usernameField.text
         user.password = passwordField.text
+        
+        // ** assigns default profile picture
+//        let image = UIImage(systemName: "person.crop.circle.fill")
+//        let userImage = UIImageView(image: image!)
+//        let imageData = userImage.image!.pngData()
+//        let file = PFFileObject(data: imageData!)
+//        user["profileImage"] = NSNull.self
+        // **
+        
         user.signUpInBackground { (success, error) in
             if success{
                 UserDefaults.standard.set(true, forKey: "isLoggedIn")
@@ -47,6 +56,7 @@ class LoginViewController: UIViewController {
             }
             else{
                 UserDefaults.standard.set(false, forKey: "isLoggedIn")
+                print("bruh")
                 print("error: \(error?.localizedDescription)")
             }
         }
