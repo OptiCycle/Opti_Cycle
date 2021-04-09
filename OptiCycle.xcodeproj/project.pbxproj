@@ -19,6 +19,16 @@
 		2B98ECAB260D5BB2003AB521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA9260D5BB2003AB521 /* LaunchScreen.storyboard */; };
 		2B98ECB6260D5BB3003AB521 /* OptiCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECB5260D5BB3003AB521 /* OptiCycleTests.swift */; };
 		2B98ECC1260D5BB3003AB521 /* OptiCycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECC0260D5BB3003AB521 /* OptiCycleUITests.swift */; };
+		2BA7FEFF261FC83700FE0FE7 /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 2BA7FEFD261FC83700FE0FE7 /* model_prototype.tflite */; };
+		2BA7FF00261FC83700FE0FE7 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2BA7FEFE261FC83700FE0FE7 /* labels.txt */; };
+		2BA7FF05261FC87800FE0FE7 /* InferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF04261FC87800FE0FE7 /* InferenceViewController.swift */; };
+		2BA7FF0A261FC8D700FE0FE7 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF09261FC8D700FE0FE7 /* PreviewViewController.swift */; };
+		2BA7FF0F261FC98E00FE0FE7 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF0E261FC98E00FE0FE7 /* InfoCell.swift */; };
+		2BA7FF18261FCA5A00FE0FE7 /* CurvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF17261FCA5A00FE0FE7 /* CurvedView.swift */; };
+		2BA7FF1E261FCB9700FE0FE7 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF1D261FCB9700FE0FE7 /* PreviewView.swift */; };
+		2BA7FF26261FCBA600FE0FE7 /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF25261FCBA600FE0FE7 /* CameraFeedManager.swift */; };
+		2BA7FF2C261FCC0400FE0FE7 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF2B261FCC0400FE0FE7 /* ModelDataHandler.swift */; };
+		2BA7FF34261FCC2100FE0FE7 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */; };
 		736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */; };
 		73E7B092261D5B1D00203D60 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7B091261D5B1D00203D60 /* ProfileViewController.swift */; };
 		7D67D55B87FD53ACCE719CCA /* Pods_OptiCycle_OptiCycleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4362688FDDB0DE296B90D35 /* Pods_OptiCycle_OptiCycleUITests.framework */; };
@@ -61,6 +71,16 @@
 		2B98ECBC260D5BB3003AB521 /* OptiCycleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptiCycleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B98ECC0260D5BB3003AB521 /* OptiCycleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptiCycleUITests.swift; sourceTree = "<group>"; };
 		2B98ECC2260D5BB3003AB521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA7FEFD261FC83700FE0FE7 /* model_prototype.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_prototype.tflite; sourceTree = "<group>"; };
+		2BA7FEFE261FC83700FE0FE7 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		2BA7FF04261FC87800FE0FE7 /* InferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InferenceViewController.swift; sourceTree = "<group>"; };
+		2BA7FF09261FC8D700FE0FE7 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		2BA7FF0E261FC98E00FE0FE7 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		2BA7FF17261FCA5A00FE0FE7 /* CurvedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedView.swift; sourceTree = "<group>"; };
+		2BA7FF1D261FCB9700FE0FE7 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		2BA7FF25261FCBA600FE0FE7 /* CameraFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
+		2BA7FF2B261FCC0400FE0FE7 /* ModelDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
+		2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
 		3AF07442642DCE88E1946CE3 /* Pods-OptiCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle/Pods-OptiCycle.release.xcconfig"; sourceTree = "<group>"; };
 		736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileChildViewController.swift; sourceTree = "<group>"; };
 		73E7B091261D5B1D00203D60 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +151,8 @@
 				2B1B8F912616980B00C69AC4 /* FeedViewController.swift */,
 				736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */,
 				73E7B091261D5B1D00203D60 /* ProfileViewController.swift */,
+				2BA7FF04261FC87800FE0FE7 /* InferenceViewController.swift */,
+				2BA7FF09261FC8D700FE0FE7 /* PreviewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -139,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2B1B8F972616991C00C69AC4 /* PostCell.swift */,
+				2BA7FF0E261FC98E00FE0FE7 /* InfoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -168,9 +191,13 @@
 		2B98EC9D260D5BB2003AB521 /* OptiCycle */ = {
 			isa = PBXGroup;
 			children = (
+				2BA7FF2A261FCBED00FE0FE7 /* ModelHandlers */,
+				2BA7FF1C261FCB7C00FE0FE7 /* CameraFeed */,
+				2BA7FF13261FCA1B00FE0FE7 /* Views */,
 				2B1B8F962616990700C69AC4 /* Cells */,
 				2B1B8F732616913E00C69AC4 /* ViewControllers */,
 				2B98EC9E260D5BB2003AB521 /* AppDelegate.swift */,
+				2BA7FEFC261FC83700FE0FE7 /* model_prototype */,
 				2B98ECA0260D5BB2003AB521 /* SceneDelegate.swift */,
 				2B98ECA2260D5BB2003AB521 /* ViewController.swift */,
 				2B98ECA4260D5BB2003AB521 /* Main.storyboard */,
@@ -197,6 +224,42 @@
 				2B98ECC2260D5BB3003AB521 /* Info.plist */,
 			);
 			path = OptiCycleUITests;
+			sourceTree = "<group>";
+		};
+		2BA7FEFC261FC83700FE0FE7 /* model_prototype */ = {
+			isa = PBXGroup;
+			children = (
+				2BA7FEFD261FC83700FE0FE7 /* model_prototype.tflite */,
+				2BA7FEFE261FC83700FE0FE7 /* labels.txt */,
+			);
+			name = model_prototype;
+			path = ../../../../Desktop/model_prototype;
+			sourceTree = "<group>";
+		};
+		2BA7FF13261FCA1B00FE0FE7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2BA7FF17261FCA5A00FE0FE7 /* CurvedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2BA7FF1C261FCB7C00FE0FE7 /* CameraFeed */ = {
+			isa = PBXGroup;
+			children = (
+				2BA7FF1D261FCB9700FE0FE7 /* PreviewView.swift */,
+				2BA7FF25261FCBA600FE0FE7 /* CameraFeedManager.swift */,
+			);
+			path = CameraFeed;
+			sourceTree = "<group>";
+		};
+		2BA7FF2A261FCBED00FE0FE7 /* ModelHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				2BA7FF2B261FCC0400FE0FE7 /* ModelDataHandler.swift */,
+				2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */,
+			);
+			path = ModelHandlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +372,8 @@
 			files = (
 				2B98ECAB260D5BB2003AB521 /* LaunchScreen.storyboard in Resources */,
 				2B98ECA8260D5BB2003AB521 /* Assets.xcassets in Resources */,
+				2BA7FF00261FC83700FE0FE7 /* labels.txt in Resources */,
+				2BA7FEFF261FC83700FE0FE7 /* model_prototype.tflite in Resources */,
 				2B98ECA6260D5BB2003AB521 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,14 +502,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA7FF1E261FCB9700FE0FE7 /* PreviewView.swift in Sources */,
 				2B1B8F802616937F00C69AC4 /* LoginViewController.swift in Sources */,
+				2BA7FF26261FCBA600FE0FE7 /* CameraFeedManager.swift in Sources */,
 				2B98ECA3260D5BB2003AB521 /* ViewController.swift in Sources */,
 				2B1B8F922616980B00C69AC4 /* FeedViewController.swift in Sources */,
+				2BA7FF0A261FC8D700FE0FE7 /* PreviewViewController.swift in Sources */,
+				2BA7FF05261FC87800FE0FE7 /* InferenceViewController.swift in Sources */,
 				2B98EC9F260D5BB2003AB521 /* AppDelegate.swift in Sources */,
+				2BA7FF2C261FCC0400FE0FE7 /* ModelDataHandler.swift in Sources */,
+				2BA7FF34261FCC2100FE0FE7 /* CVPixelBufferExtension.swift in Sources */,
 				2B98ECA1260D5BB2003AB521 /* SceneDelegate.swift in Sources */,
+				2BA7FF18261FCA5A00FE0FE7 /* CurvedView.swift in Sources */,
 				736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */,
 				73E7B092261D5B1D00203D60 /* ProfileViewController.swift in Sources */,
 				2B1B8F982616991C00C69AC4 /* PostCell.swift in Sources */,
+				2BA7FF0F261FC98E00FE0FE7 /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
