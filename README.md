@@ -1,5 +1,11 @@
  Original App Design Project - README Template
-===
+ ===
+ 
+ ## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://g.recordit.co/bN6nlGV0Tt.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 # OptiCycle
 
