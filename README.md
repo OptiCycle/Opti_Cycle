@@ -12,7 +12,7 @@
 
 ## Overview
 ### Description
-OptiCycle is an app that aims to make recycling smarter. It is able to categorize waste for a user, connects users to other recyclers, provides local recycling information, and track's a user's recycling habits.
+OptiCycle is an app that aims to make recycling smarter. It is able to categorize waste for a user, connect users to other recyclers, provide local recycling information, and track a user's recycling habits.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
