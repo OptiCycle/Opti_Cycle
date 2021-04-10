@@ -33,7 +33,6 @@
 		736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */; };
 		73E7B092261D5B1D00203D60 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7B091261D5B1D00203D60 /* ProfileViewController.swift */; };
 		7D67D55B87FD53ACCE719CCA /* Pods_OptiCycle_OptiCycleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4362688FDDB0DE296B90D35 /* Pods_OptiCycle_OptiCycleUITests.framework */; };
-		9849B348262229640057DEDF /* 54940-recycle-icon-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9849B347262229640057DEDF /* 54940-recycle-icon-animation.json */; };
 		E7041557FB3551E23465DB55 /* Pods_OptiCycleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,7 +88,6 @@
 		73E7B091261D5B1D00203D60 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		74D2F5B10DCB5AF32AB7E24F /* Pods-OptiCycle-OptiCycleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8446DA0995105CEAC89EA1FB /* Pods-OptiCycleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycleTests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycleTests/Pods-OptiCycleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9849B347262229640057DEDF /* 54940-recycle-icon-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "54940-recycle-icon-animation.json"; path = "../54940-recycle-icon-animation.json"; sourceTree = "<group>"; };
 		B6BDF389C9C6232B966AB222 /* Pods-OptiCycle-OptiCycleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2021AD562B407724DAC738B /* Pods_OptiCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,7 +174,6 @@
 		2B98EC92260D5BB2003AB521 = {
 			isa = PBXGroup;
 			children = (
-				9849B347262229640057DEDF /* 54940-recycle-icon-animation.json */,
 				2B98EC9D260D5BB2003AB521 /* OptiCycle */,
 				2B98ECB4260D5BB2003AB521 /* OptiCycleTests */,
 				2B98ECBF260D5BB3003AB521 /* OptiCycleUITests */,
@@ -369,7 +366,6 @@
 			files = (
 				2B98ECAB260D5BB2003AB521 /* LaunchScreen.storyboard in Resources */,
 				2B98ECA8260D5BB2003AB521 /* Assets.xcassets in Resources */,
-				9849B348262229640057DEDF /* 54940-recycle-icon-animation.json in Resources */,
 				2B98ECA6260D5BB2003AB521 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
