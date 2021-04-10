@@ -4,6 +4,7 @@
  
  ## User Stories
  
+ The following features are implemented:
  - [x] User can sign up and login and stays logged in across restarts
  - [x] User can log out
  - [x] User can view posts
