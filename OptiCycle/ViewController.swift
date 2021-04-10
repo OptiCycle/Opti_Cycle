@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
+    
+    var animationView: AnimationView?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+
     }
 
 
