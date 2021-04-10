@@ -113,7 +113,13 @@
                         <viewLayoutGuide key="safeArea" id="D1e-am-82H"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="pwl-6P-pOH"/>
+                    <navigationItem key="navigationItem" title="Profile" id="pwl-6P-pOH">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="kuF-sB-6Av">
+                            <connections>
+                                <action selector="onLogout:" destination="qVj-Xp-tsA" id="Jq2-xQ-2H5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gG-cZ-WNt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +128,7 @@
         <!--Login View Controller-->
         <scene sceneID="1G3-kg-QyM">
             <objects>
-                <viewController id="OOv-cj-6ey" customClass="LoginViewController" customModule="OptiCycle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="OOv-cj-6ey" customClass="LoginViewController" customModule="OptiCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qGA-fM-Q3x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

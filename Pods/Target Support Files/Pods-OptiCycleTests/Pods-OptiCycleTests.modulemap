@@ -1,0 +1,6 @@
+framework module Pods_OptiCycleTests {
+  umbrella header "Pods-OptiCycleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
