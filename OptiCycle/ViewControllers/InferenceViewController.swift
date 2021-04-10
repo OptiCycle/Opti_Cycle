@@ -117,20 +117,20 @@ class InferenceViewController: UIViewController {
         post.saveInBackground()
         {(success, error) in
             if success{
-//                let main = UIStoryboard(name: "Main", bundle: nil)
-//                let resultsVC = main.instantiateViewController(identifier: "ResultsViewController") as! ResultsViewController
-//                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-//                    let delegate = windowScene.delegate as? SceneDelegate
-//                  else {
-//                    return
-//                  }
-//                
-//                delegate.window?.rootViewController = resultsVC
-//                resultsVC.typeImage.image = UIImage(named: imageName) as! UIImage
-//                resultsVC.revealLabel.text = "This is \(item)"
-//                resultsVC.disposeLabel.text = "Dispose in the \(item) bin"
-//                self.dismiss(animated: true, completion: nil)
-//                 
+                let main = UIStoryboard(name: "Main", bundle: nil)
+                let resultsVC = main.instantiateViewController(identifier: "ResultsViewController") as! ResultsViewController
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                    let delegate = windowScene.delegate as? SceneDelegate
+                  else {
+                    return
+                  }
+                
+                delegate.window?.rootViewController = resultsVC
+                resultsVC.typeImage.image = UIImage(named: imageName) as! UIImage
+                resultsVC.revealLabel.text = "This is \(item)"
+                resultsVC.disposeLabel.text = "Dispose in the \(item) bin"
+                self.dismiss(animated: true, completion: nil)
+                 
                 print("saved")
             }
             else{

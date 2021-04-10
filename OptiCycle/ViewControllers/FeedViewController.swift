@@ -15,21 +15,25 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     
-//    var refreshControl: UIRefreshControl!
+    var refreshControl: UIRefreshControl!
     var posts = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-//        refreshControl = UIRefreshControl()
-//        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
-//        tableView.refreshControl = refreshControl
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tableView.refreshControl = refreshControl
         
         refreshData()
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        refreshData()
     }
     
     @objc func refreshData(){
@@ -44,7 +48,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.tableView.reloadData()
             }
         }
-//        self.refreshControl.endRefreshing()
+        self.refreshControl.endRefreshing()
         
     }
     
@@ -54,14 +58,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
-//        let post = posts[indexPath.row]
-//        let user = post["author"] as! PFUser
-//        let name = user.username as! String
-//        let item = post["item"] as! String
-//        let conf = post["confidence"] as! String
-//        cell.postLabel.text = name + " recycled " + item + " with a confidence of " + conf
-//        let imageLabel = post["image_label"] as! String
-//        cell.postImage.image = UIImage(named: imageLabel)
+        let post = posts[indexPath.row]
+        let user = post["author"] as! PFUser
+        let name = user.username as! String
+        let item = post["item"] as! String
+        let conf = post["confidence"] as! String
+        cell.postLabel.text = name + " recycled " + item + " with a confidence of " + conf
+        let imageLabel = post["image_label"] as! String
+        cell.postImage.image = UIImage(named: imageLabel)
         return cell
     }
 
