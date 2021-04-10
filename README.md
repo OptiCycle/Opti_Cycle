@@ -1,5 +1,19 @@
  Original App Design Project - README Template
  ===
+ # OptiCycle
+ 
+ ## User Stories
+ 
+ - [x] User can sign up and login and stays logged in across restarts
+ - [x] User can log out
+ - [x] User can view posts
+ - [x] User can create a recycle post
+ - [x] User can view local standards
+ - [ ] User can search local standards by location
+ - [x] User can view profile
+ - [ ] User can view recycling progress
+ - [ ] User can add friends
+ - [ ] User can view shop
  
  ## Video Walkthrough
 
@@ -7,7 +21,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/bN6nlGV0Tt.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-# OptiCycle
+
 
 
 ## Table of Contents
