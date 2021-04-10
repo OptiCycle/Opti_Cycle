@@ -12,6 +12,8 @@
 		2B1B8F922616980B00C69AC4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B8F912616980B00C69AC4 /* FeedViewController.swift */; };
 		2B1B8F982616991C00C69AC4 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B8F972616991C00C69AC4 /* PostCell.swift */; };
 		2B454BF42622331E0013AED0 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF32622331E0013AED0 /* ResultsViewController.swift */; };
+		2B454BF9262238D70013AED0 /* LocalStandardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF8262238D70013AED0 /* LocalStandardsViewController.swift */; };
+		2B454BFE2622399C0013AED0 /* LocalStandardsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */; };
 		2B98EC9F260D5BB2003AB521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98EC9E260D5BB2003AB521 /* AppDelegate.swift */; };
 		2B98ECA1260D5BB2003AB521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECA0260D5BB2003AB521 /* SceneDelegate.swift */; };
 		2B98ECA3260D5BB2003AB521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECA2260D5BB2003AB521 /* ViewController.swift */; };
@@ -59,6 +61,8 @@
 		2B1B8F912616980B00C69AC4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		2B1B8F972616991C00C69AC4 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		2B454BF32622331E0013AED0 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		2B454BF8262238D70013AED0 /* LocalStandardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStandardsViewController.swift; sourceTree = "<group>"; };
+		2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStandardsViewCell.swift; sourceTree = "<group>"; };
 		2B98EC9B260D5BB2003AB521 /* OptiCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptiCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B98EC9E260D5BB2003AB521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B98ECA0260D5BB2003AB521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				2BA7FF04261FC87800FE0FE7 /* InferenceViewController.swift */,
 				2BA7FF09261FC8D700FE0FE7 /* PreviewViewController.swift */,
 				2B454BF32622331E0013AED0 /* ResultsViewController.swift */,
+				2B454BF8262238D70013AED0 /* LocalStandardsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			children = (
 				2B1B8F972616991C00C69AC4 /* PostCell.swift */,
 				2BA7FF0E261FC98E00FE0FE7 /* InfoCell.swift */,
+				2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 			files = (
 				2BA7FF1E261FCB9700FE0FE7 /* PreviewView.swift in Sources */,
 				2B1B8F802616937F00C69AC4 /* LoginViewController.swift in Sources */,
+				2B454BFE2622399C0013AED0 /* LocalStandardsViewCell.swift in Sources */,
 				2BA7FF26261FCBA600FE0FE7 /* CameraFeedManager.swift in Sources */,
 				2B98ECA3260D5BB2003AB521 /* ViewController.swift in Sources */,
 				2B1B8F922616980B00C69AC4 /* FeedViewController.swift in Sources */,
@@ -520,6 +527,7 @@
 				2BA7FF18261FCA5A00FE0FE7 /* CurvedView.swift in Sources */,
 				736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */,
 				73E7B092261D5B1D00203D60 /* ProfileViewController.swift in Sources */,
+				2B454BF9262238D70013AED0 /* LocalStandardsViewController.swift in Sources */,
 				2B1B8F982616991C00C69AC4 /* PostCell.swift in Sources */,
 				2BA7FF0F261FC98E00FE0FE7 /* InfoCell.swift in Sources */,
 			);
