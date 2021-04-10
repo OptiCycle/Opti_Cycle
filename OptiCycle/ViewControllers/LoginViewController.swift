@@ -7,18 +7,40 @@
 
 import UIKit
 import Parse
+import Lottie
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    var animationView: AnimationView?
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        animationView = .init(name: "54940-recycle-icon-animation")
+        animationView!.frame = CGRect(x: view.frame.width / 3 + 15, y: 175, width: 100, height: 100)
+        
+        startAnimations()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+
+        startAnimations()
+    }
+    
+    func startAnimations() {
+        
+        animationView!.contentMode = .scaleAspectFill
+        view.addSubview(animationView!)
+        animationView!.loopMode = .loop
+        animationView!.animationSpeed = 1.25
+        animationView!.play()
+    }
+
     @IBAction func onLogin(_ sender: Any) {
         let usrname = usernameField.text!
         let pass = passwordField.text!
