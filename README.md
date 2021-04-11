@@ -12,7 +12,7 @@
  - [x] User can view local standards
  - [ ] User can search local standards by location
  - [x] User can view profile
- - [ ] User can view recycling progress
+ - [x] User can view recycling progress
  - [ ] User can add friends
  - [ ] User can view shop
  
