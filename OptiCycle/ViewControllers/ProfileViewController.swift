@@ -7,13 +7,35 @@
 
 import UIKit
 import Parse
+import MBCircularProgressBar
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var progressBarView: MBCircularProgressBarView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.progressBarView.value = 0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // Make postsCountLabel equal to amount of posts user has posted
+        let query = PFQuery(className: "Posts")
+        query.whereKey("author", equalTo: PFUser.current()!)
+        
+        query.countObjectsInBackground { (count: Int32, error: Error?) in
+            if let error = error {
+                // Request failed
+                print(error.localizedDescription)
+            } else {
+                UIView.animate(withDuration: 2.0) {
+                    self.progressBarView.value = CGFloat(count)
+                }
+            }
+        }
     }
     
     @IBAction func onLogout(_ sender: Any) {

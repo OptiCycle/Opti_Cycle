@@ -14,13 +14,10 @@
 		2B454BF42622331E0013AED0 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF32622331E0013AED0 /* ResultsViewController.swift */; };
 		2B454BF9262238D70013AED0 /* LocalStandardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF8262238D70013AED0 /* LocalStandardsViewController.swift */; };
 		2B454BFE2622399C0013AED0 /* LocalStandardsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */; };
-		2B454C1B262246A00013AED0 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B454C1A262246A00013AED0 /* labels.txt */; };
-		2B454C232622471D0013AED0 /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 2B454C1F262246A60013AED0 /* model_prototype.tflite */; };
 		2B98EC9F260D5BB2003AB521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98EC9E260D5BB2003AB521 /* AppDelegate.swift */; };
 		2B98ECA1260D5BB2003AB521 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECA0260D5BB2003AB521 /* SceneDelegate.swift */; };
 		2B98ECA3260D5BB2003AB521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECA2260D5BB2003AB521 /* ViewController.swift */; };
 		2B98ECA6260D5BB2003AB521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA4260D5BB2003AB521 /* Main.storyboard */; };
-		2B98ECA8260D5BB2003AB521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA7260D5BB2003AB521 /* Assets.xcassets */; };
 		2B98ECAB260D5BB2003AB521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA9260D5BB2003AB521 /* LaunchScreen.storyboard */; };
 		2B98ECB6260D5BB3003AB521 /* OptiCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECB5260D5BB3003AB521 /* OptiCycleTests.swift */; };
 		2B98ECC1260D5BB3003AB521 /* OptiCycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98ECC0260D5BB3003AB521 /* OptiCycleUITests.swift */; };
@@ -389,10 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B98ECAB260D5BB2003AB521 /* LaunchScreen.storyboard in Resources */,
-				2B98ECA8260D5BB2003AB521 /* Assets.xcassets in Resources */,
 				2B98ECA6260D5BB2003AB521 /* Main.storyboard in Resources */,
-				2B454C1B262246A00013AED0 /* labels.txt in Resources */,
-				2B454C232622471D0013AED0 /* model_prototype.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +711,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V848CS48D4;
+				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = OptiCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -737,6 +732,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V848CS48D4;
+				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = OptiCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
