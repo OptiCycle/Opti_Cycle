@@ -99,8 +99,9 @@
                                             <segue destination="fe8-WR-zYs" kind="embed" identifier="ToProfileSegue" id="Tfq-8m-Qpa"/>
                                         </connections>
                                     </containerView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaM-tW-ZNY" customClass="MBCircularProgressBarView">
-                                        <rect key="frame" x="0.0" y="306" width="414" height="233"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MaM-tW-ZNY" customClass="MBCircularProgressBarView">
+                                        <rect key="frame" x="0.0" y="306" width="139" height="139"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
@@ -132,16 +133,86 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eD4-Xe-SEA" customClass="MBCircularProgressBarView">
+                                        <rect key="frame" x="138" y="306" width="139" height="139"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="1000"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" systemColor="systemBlueColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                                <color key="value" systemColor="systemBlueColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.24553571428571427" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                                <color key="value" systemColor="systemBlueColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                <real key="value" value="4100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressRotationAngle">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MF0-a8-uEM" customClass="MBCircularProgressBarView">
+                                        <rect key="frame" x="275" y="306" width="139" height="139"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" systemColor="systemYellowColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                                <color key="value" systemColor="systemYellowColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressRotationAngle">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                                <color key="value" systemColor="systemYellowColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.24553571430000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="MaM-tW-ZNY" firstAttribute="top" secondItem="Alz-dY-6or" secondAttribute="bottom" id="11U-5Y-yLR"/>
                                     <constraint firstItem="Alz-dY-6or" firstAttribute="trailing" secondItem="zIB-96-q7E" secondAttribute="trailing" id="57n-Tx-NP7"/>
                                     <constraint firstItem="Alz-dY-6or" firstAttribute="leading" secondItem="zIB-96-q7E" secondAttribute="leading" id="Kg2-8x-2lH"/>
                                     <constraint firstItem="zIB-96-q7E" firstAttribute="bottom" secondItem="Alz-dY-6or" secondAttribute="bottom" constant="480" id="OFf-Fy-HYZ"/>
-                                    <constraint firstItem="zIB-96-q7E" firstAttribute="bottom" secondItem="MaM-tW-ZNY" secondAttribute="bottom" constant="247" id="UiT-u8-rS0"/>
-                                    <constraint firstItem="MaM-tW-ZNY" firstAttribute="trailing" secondItem="zIB-96-q7E" secondAttribute="trailing" id="gBf-vb-gsg"/>
                                     <constraint firstItem="Alz-dY-6or" firstAttribute="top" secondItem="zIB-96-q7E" secondAttribute="top" constant="56" id="zOf-HL-SmD"/>
-                                    <constraint firstItem="MaM-tW-ZNY" firstAttribute="leading" secondItem="zIB-96-q7E" secondAttribute="leading" id="zZb-n4-E0G"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="A0p-Cu-9W8"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="zIB-96-q7E"/>
@@ -158,7 +229,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="progressBarView" destination="MaM-tW-ZNY" id="mnJ-9E-LJx"/>
+                        <outlet property="badgesProgressBarView" destination="MF0-a8-uEM" id="QQG-rb-r32"/>
+                        <outlet property="postsProgressBarView" destination="MaM-tW-ZNY" id="rb8-r2-jwW"/>
+                        <outlet property="treesProgressBarView" destination="eD4-Xe-SEA" id="Ike-RJ-azi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gG-cZ-WNt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -759,8 +832,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

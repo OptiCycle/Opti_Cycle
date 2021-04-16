@@ -11,14 +11,17 @@ import MBCircularProgressBar
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var progressBarView: MBCircularProgressBarView!
+
+    @IBOutlet weak var postsProgressBarView: MBCircularProgressBarView!
+    @IBOutlet weak var treesProgressBarView: MBCircularProgressBarView!
+    @IBOutlet weak var badgesProgressBarView: MBCircularProgressBarView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        self.progressBarView.value = 0
+        self.postsProgressBarView.value = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,9 +35,19 @@ class ProfileViewController: UIViewController {
                 print(error.localizedDescription)
             } else {
                 UIView.animate(withDuration: 2.0) {
-                    self.progressBarView.value = CGFloat(count)
+                    self.postsProgressBarView.value = CGFloat(count)
                 }
             }
+        }
+        
+        UIView.animate(withDuration: 2.0)
+        {
+            self.treesProgressBarView.value = 1000
+        }
+        
+        UIView.animate(withDuration: 2.0)
+        {
+            self.badgesProgressBarView.value = 6
         }
     }
     
