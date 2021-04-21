@@ -22,6 +22,8 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.postsProgressBarView.value = 0
+        self.treesProgressBarView.value = 0
+        self.badgesProgressBarView.value = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {

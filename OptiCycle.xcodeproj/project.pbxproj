@@ -29,6 +29,8 @@
 		2BA7FF26261FCBA600FE0FE7 /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF25261FCBA600FE0FE7 /* CameraFeedManager.swift */; };
 		2BA7FF2C261FCC0400FE0FE7 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF2B261FCC0400FE0FE7 /* ModelDataHandler.swift */; };
 		2BA7FF34261FCC2100FE0FE7 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */; };
+		734952BD262FB7E90075A8B6 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 734952BC262FB7E90075A8B6 /* labels.txt */; };
+		7349531A262FDD770075A8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA7260D5BB2003AB521 /* Assets.xcassets */; };
 		736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */; };
 		73E7B092261D5B1D00203D60 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7B091261D5B1D00203D60 /* ProfileViewController.swift */; };
 		7D67D55B87FD53ACCE719CCA /* Pods_OptiCycle_OptiCycleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4362688FDDB0DE296B90D35 /* Pods_OptiCycle_OptiCycleUITests.framework */; };
@@ -60,8 +62,6 @@
 		2B454BF32622331E0013AED0 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2B454BF8262238D70013AED0 /* LocalStandardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStandardsViewController.swift; sourceTree = "<group>"; };
 		2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStandardsViewCell.swift; sourceTree = "<group>"; };
-		2B454C1A262246A00013AED0 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = ../../../../../Desktop/model_prototype/labels.txt; sourceTree = "<group>"; };
-		2B454C1F262246A60013AED0 /* model_prototype.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model_prototype.tflite; path = ../../../../../Desktop/model_prototype/model_prototype.tflite; sourceTree = "<group>"; };
 		2B98EC9B260D5BB2003AB521 /* OptiCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptiCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B98EC9E260D5BB2003AB521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B98ECA0260D5BB2003AB521 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,11 +85,12 @@
 		2BA7FF2B261FCC0400FE0FE7 /* ModelDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
 		2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
 		3AF07442642DCE88E1946CE3 /* Pods-OptiCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle/Pods-OptiCycle.release.xcconfig"; sourceTree = "<group>"; };
+		734952BB262FB7DF0075A8B6 /* model_prototype.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model_prototype.tflite; path = ../../../../../../Downloads/model_prototype/model_prototype.tflite; sourceTree = "<group>"; };
+		734952BC262FB7E90075A8B6 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = ../../../../../../Downloads/model_prototype/labels.txt; sourceTree = "<group>"; };
 		736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileChildViewController.swift; sourceTree = "<group>"; };
 		73E7B091261D5B1D00203D60 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		74D2F5B10DCB5AF32AB7E24F /* Pods-OptiCycle-OptiCycleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8446DA0995105CEAC89EA1FB /* Pods-OptiCycleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycleTests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycleTests/Pods-OptiCycleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9849B358262241E50057DEDF /* 54940-recycle-icon-animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "54940-recycle-icon-animation.json"; sourceTree = "<group>"; };
 		B6BDF389C9C6232B966AB222 /* Pods-OptiCycle-OptiCycleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2021AD562B407724DAC738B /* Pods_OptiCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,8 +177,8 @@
 		2B454C192622466F0013AED0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B454C1F262246A60013AED0 /* model_prototype.tflite */,
-				2B454C1A262246A00013AED0 /* labels.txt */,
+				734952BB262FB7DF0075A8B6 /* model_prototype.tflite */,
+				734952BC262FB7E90075A8B6 /* labels.txt */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,7 +186,6 @@
 		2B98EC92260D5BB2003AB521 = {
 			isa = PBXGroup;
 			children = (
-				9849B357262241E00057DEDF /* Extras */,
 				2B98EC9D260D5BB2003AB521 /* OptiCycle */,
 				2B98ECB4260D5BB2003AB521 /* OptiCycleTests */,
 				2B98ECBF260D5BB3003AB521 /* OptiCycleUITests */,
@@ -267,14 +267,6 @@
 				2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */,
 			);
 			path = ModelHandlers;
-			sourceTree = "<group>";
-		};
-		9849B357262241E00057DEDF /* Extras */ = {
-			isa = PBXGroup;
-			children = (
-				9849B358262241E50057DEDF /* 54940-recycle-icon-animation.json */,
-			);
-			path = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +378,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B98ECAB260D5BB2003AB521 /* LaunchScreen.storyboard in Resources */,
+				734952BD262FB7E90075A8B6 /* labels.txt in Resources */,
+				7349531A262FDD770075A8B6 /* Assets.xcassets in Resources */,
 				2B98ECA6260D5BB2003AB521 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,7 +704,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V848CS48D4;
+				DEVELOPMENT_TEAM = H8A6K5894T;
 				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = OptiCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -731,7 +725,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V848CS48D4;
+				DEVELOPMENT_TEAM = H8A6K5894T;
 				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = OptiCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
