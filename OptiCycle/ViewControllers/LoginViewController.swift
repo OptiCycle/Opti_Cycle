@@ -13,12 +13,35 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signinButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
     
     var animationView: AnimationView?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Color of mintGreen being used is:
+        // UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
+        
+        usernameField.layer.cornerRadius = 5
+        usernameField.layer.borderWidth = 2
+        usernameField.layer.borderColor = UIColor.white.cgColor
+        
+        passwordField.layer.cornerRadius = 5
+        passwordField.layer.borderWidth = 2
+        passwordField.layer.borderColor = UIColor.white.cgColor
+        
+        signinButton.backgroundColor = .clear
+        signinButton.layer.cornerRadius = 5
+        signinButton.layer.borderWidth = 2
+        signinButton.layer.borderColor = UIColor.white.cgColor
+        
+        signupButton.backgroundColor = .clear
+        signupButton.layer.cornerRadius = 5
+        signupButton.layer.borderWidth = 2
+        signupButton.layer.borderColor = UIColor.white.cgColor
         
         animationView = .init(name: "54940-recycle-icon-animation")
         animationView!.frame = CGRect(x: view.frame.width / 3 + 15, y: 175, width: 100, height: 100)

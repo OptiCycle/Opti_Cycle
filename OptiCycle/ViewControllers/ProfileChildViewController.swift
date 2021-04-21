@@ -48,7 +48,7 @@ class ProfileChildViewController: UIViewController, UIImagePickerControllerDeleg
             imageFile.getDataInBackground(block: { (data, error) in
                 if error == nil {
                     DispatchQueue.main.async {
-                        
+
                         let image = UIImage(data: data!)
 //                        let size = CGSize(width: 300, height: 300)
 //                        let scaledImage = image!.af_imageAspectScaled(toFill: size)
