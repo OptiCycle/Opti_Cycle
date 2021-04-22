@@ -86,6 +86,9 @@ class LoginViewController: UIViewController {
         user.username = usernameField.text
         user.password = passwordField.text
         
+        
+        user["firstTimer"] = "true"
+        
         // ** assigns default profile picture
 //        let image = UIImage(systemName: "person.crop.circle.fill")
 //        let userImage = UIImageView(image: image!)
@@ -101,7 +104,7 @@ class LoginViewController: UIViewController {
             }
             else{
                 UserDefaults.standard.set(false, forKey: "isLoggedIn")
-                print("bruh")
+//                print("bruh")
                 print("error: \(error?.localizedDescription)")
             }
         }

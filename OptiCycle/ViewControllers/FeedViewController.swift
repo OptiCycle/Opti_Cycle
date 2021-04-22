@@ -30,6 +30,31 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+            
+        let user = PFUser.current() as! PFUser
+
+        print(user["firstTimer"] as! String)
+        
+        if user["firstTimer"]  as! String == "true" {
+            
+            let username = user.username as! String
+
+            let alert = UIAlertController(title: "\(username), Welcome to Opticycle!", message: "Opticycle is an app that helps you recycle more effectively. Tap the camera icon in the top right to begin scanning recyclables\n", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
+            
+        }
+        
+        user.setValue("false", forKey: "firstTimer")
+        user.saveInBackground()
+        
+        print(user["firstTimer"]  as! String)
+
+
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
