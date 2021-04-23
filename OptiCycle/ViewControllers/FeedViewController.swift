@@ -40,9 +40,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             let username = user.username as! String
 
-            let alert = UIAlertController(title: "\(username), Welcome to Opticycle!", message: "Opticycle is an app that helps you recycle more effectively. Tap the camera icon in the top right to begin scanning recyclables\n", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Hello \(username), welcome to Opticycle!", message: "Opticycle is an app that helps you recycle more effectively. You are currently on the Home/Feed page where any posts you make will appear.\n\n-Tap the camera in the top right to begin scanning recyclables\n-Tap the bottom middle icon to see Local Recycling Standards\n-Tap the bottom right to go to your profile page", preferredStyle: .alert) //.actionsheet
 
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
 
             self.present(alert, animated: true)
             
@@ -93,6 +93,25 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.postImage.image = UIImage(named: imageLabel)
         return cell
     }
+    
+    
+    
+    @IBAction func onInfo(_ sender: Any) {
+        
+        let user = PFUser.current() as! PFUser
+
+        let username = user.username as! String
+
+        let alert = UIAlertController(title: "About Opticycle", message: "Opticycle is an app that helps you recycle more effectively. You are currently on the Home/Feed page where any posts you make will appear.\n\n-Tap the camera in the top right to begin scanning recyclables\n-Tap the bottom middle icon to see Local Recycling Standards\n-Tap the bottom right to go to your profile page", preferredStyle: .alert) //.actionsheet
+
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+
+        self.present(alert, animated: true)
+        
+    }
+    
+    
+    
 
     /*
     // MARK: - Navigation
@@ -103,5 +122,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    
 
 }

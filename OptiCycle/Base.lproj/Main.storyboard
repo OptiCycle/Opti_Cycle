@@ -66,6 +66,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="WhX-te-bTl">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="info.circle" catalog="system" id="QDE-Yr-IgY">
+                            <connections>
+                                <action selector="onInfo:" destination="FuO-p9-8Ok" id="VwD-pz-GfY"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="camera" catalog="system" id="KZi-Gu-t1H">
                             <connections>
                                 <segue destination="XU6-3c-91E" kind="showDetail" id="RZ1-2x-9b2"/>
@@ -839,6 +844,7 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="chevron.down.circle.fill" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>

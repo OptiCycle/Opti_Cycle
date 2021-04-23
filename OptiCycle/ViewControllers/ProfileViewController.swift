@@ -55,16 +55,27 @@ class ProfileViewController: UIViewController {
     
     @IBAction func onLogout(_ sender: Any) {
         
-        PFUser.logOut()
+        let user = PFUser.current() as! PFUser
+        let username = user.username as! String
+
+        let alert = UIAlertController(title: "Sign out", message: "You will be returned to the login screen", preferredStyle: .alert) //.actionsheet
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        
-        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
-        
-        let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
-        
-        delegate.window?.rootViewController = loginViewController
-        
+        alert.addAction(UIAlertAction(title: "Sign out", style: UIAlertAction.Style.destructive, handler: {(_: UIAlertAction!) in
+            
+            PFUser.logOut()
+            
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            
+            let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+            
+            let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+            
+            delegate.window?.rootViewController = loginViewController
+        }))
+
+        self.present(alert, animated: true)
     }
     
     /*
