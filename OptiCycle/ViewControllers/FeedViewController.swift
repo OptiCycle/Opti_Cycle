@@ -50,19 +50,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             
             print("yo")
-            let username = user.username as! String
+            
+            if user["welcomeBack"] as! String == "true" {
+                
+                user.setValue("false", forKey: "welcomeBack")
+                user.saveInBackground()
+                
+                let username = user.username as! String
 
-            let alert = UIAlertController(title: "Welcome back \(username)", message: "", preferredStyle: .alert) //.actionsheet
-            
-            alert.view.tintColor = UIColor.green;
-            self.present(alert, animated: true)
+                let alert = UIAlertController(title: "Welcome back \(username)", message: "", preferredStyle: .alert) //.actionsheet
+                
+                alert.view.tintColor = UIColor.green;
+                self.present(alert, animated: true)
 
-//            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-        
+    //            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
             
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                alert.dismiss(animated: true, completion: nil)
+                
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    alert.dismiss(animated: true, completion: nil)
+                }
             }
         }
         

@@ -22,6 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let main = UIStoryboard(name: "Main", bundle: nil)
             let feedNavigationController = main.instantiateViewController(identifier: "TabNavigationController")
             window?.rootViewController = feedNavigationController
+            
+            let user = PFUser.current() as! PFUser
+            user["welcomeBack"] = "true"
         }
         guard let _ = (scene as? UIWindowScene) else { return }
     }

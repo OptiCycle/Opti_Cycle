@@ -73,6 +73,9 @@ class LoginViewController: UIViewController {
             if user != nil{
                 UserDefaults.standard.set(true, forKey: "isLoggedIn")
                 self.performSegue(withIdentifier: "loginSuccess", sender: nil)
+                
+                let user = PFUser.current() as! PFUser
+                user["welcomeBack"] = "true"
             }
             else{
                 UserDefaults.standard.set(false, forKey: "isLoggedIn")
