@@ -44,12 +44,12 @@ class ProfileViewController: UIViewController {
         
         UIView.animate(withDuration: 2.0)
         {
-            self.treesProgressBarView.value = 32
+            self.treesProgressBarView.value = 0
         }
         
         UIView.animate(withDuration: 2.0)
         {
-            self.badgesProgressBarView.value = 6
+            self.badgesProgressBarView.value = 0
         }
     }
     
