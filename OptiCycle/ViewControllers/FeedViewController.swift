@@ -46,6 +46,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
             self.present(alert, animated: true)
             
+        } else {
+            
+            print("yo")
+            let username = user.username as! String
+
+            let alert = UIAlertController(title: "Welcome back \(username)", message: "", preferredStyle: .alert) //.actionsheet
+            self.present(alert, animated: true)
+
+//            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+        
+            
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                alert.dismiss(animated: true, completion: nil)
+            }
         }
         
         user.setValue("false", forKey: "firstTimer")
