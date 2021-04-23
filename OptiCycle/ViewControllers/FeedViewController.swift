@@ -52,13 +52,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let username = user.username as! String
 
             let alert = UIAlertController(title: "Welcome back \(username)", message: "", preferredStyle: .alert) //.actionsheet
+            
+            alert.view.tintColor = UIColor.green;
             self.present(alert, animated: true)
 
 //            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
         
             
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 alert.dismiss(animated: true, completion: nil)
             }
         }
