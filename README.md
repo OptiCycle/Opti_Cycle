@@ -1,5 +1,7 @@
  Original App Design Project - README Template
  ===
+
+
  # OptiCycle
  
  ## User Stories
@@ -17,13 +19,15 @@
  - [ ] User can view shop
  
  ## Video Walkthrough
-
+ ### Part 1
 Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/bN6nlGV0Tt.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+ ### Part 2
+Here's a walkthrough of all initial features and aesthetics:
 
-
+https://user-images.githubusercontent.com/44587335/116011356-937c5600-a5f2-11eb-85fe-9cc47c0ad687.mp4
 
 ## Table of Contents
 1. [Overview](#Overview)
