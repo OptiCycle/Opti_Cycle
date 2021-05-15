@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
         signupButton.backgroundColor = .clear
         signupButton.layer.cornerRadius = 5
         signupButton.layer.borderWidth = 2
-        signupButton.layer.borderColor = UIColor.white.cgColor
+        signupButton.layer.borderColor = UIColor.black.cgColor
         
         animationView = .init(name: "54940-recycle-icon-animation")
         animationView!.frame = CGRect(x: view.frame.width / 3 + 15, y: 175, width: 100, height: 100)
@@ -79,37 +79,16 @@ class LoginViewController: UIViewController {
             }
             else{
                 UserDefaults.standard.set(false, forKey: "isLoggedIn")
+                
                 print("error: \(error?.localizedDescription)")
+                
+                let incorrectCredentialAlert = UIAlertController(title: "Login Failed", message: "Your username or password is incorrect or doesn't exist.", preferredStyle: .alert) //.actionsheet
+                
+                incorrectCredentialAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                self.present(incorrectCredentialAlert, animated: true)
             }
             
-        }
-    }
-    @IBAction func onSignUp(_ sender: Any) {
-        let user = PFUser()
-        user.username = usernameField.text
-        user.password = passwordField.text
-        
-        
-        user["firstTimer"] = "true"
-        
-        // ** assigns default profile picture
-//        let image = UIImage(systemName: "person.crop.circle.fill")
-//        let userImage = UIImageView(image: image!)
-//        let imageData = userImage.image!.pngData()
-//        let file = PFFileObject(data: imageData!)
-//        user["profileImage"] = NSNull.self
-        // **
-        
-        user.signUpInBackground { (success, error) in
-            if success{
-                UserDefaults.standard.set(true, forKey: "isLoggedIn")
-                self.performSegue(withIdentifier: "loginSuccess", sender: nil)
-            }
-            else{
-                UserDefaults.standard.set(false, forKey: "isLoggedIn")
-//                print("bruh")
-                print("error: \(error?.localizedDescription)")
-            }
         }
     }
     
@@ -117,14 +96,7 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    @IBAction func UnwindSignUpViewController(unwindSegue: UIStoryboardSegue){}
+    
 
 }
