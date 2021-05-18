@@ -8,7 +8,8 @@
  
  The following features are implemented:
  - [x] User can sign up and login and stays logged in across restarts
- - [x] User can log out
+ - [x] User can log out/delete account
+ - [x] User can update/change username, password, and email
  - [x] User can view posts
  - [x] User can create a recycle post
  - [x] User can view local standards
