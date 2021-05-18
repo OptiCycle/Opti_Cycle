@@ -67,7 +67,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
                 
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                     alert.dismiss(animated: true, completion: nil)
                 }
             }
@@ -116,6 +116,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.postLabel.text = name + " recycled " + item + " with a confidence of " + conf
         let imageLabel = post["image_label"] as! String
         cell.postImage.image = UIImage(named: imageLabel)
+
+        user[item] = user[item] as! Int + 1
+        user.saveInBackground()
+        
         return cell
     }
     

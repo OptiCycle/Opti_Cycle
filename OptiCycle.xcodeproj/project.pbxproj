@@ -31,17 +31,17 @@
 		2BA7FF34261FCC2100FE0FE7 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */; };
 		7349531A262FDD770075A8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA7260D5BB2003AB521 /* Assets.xcassets */; };
 		736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */; };
-		73CCB746264DB2AF0037F936 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 73CCB745264DB2AF0037F936 /* labels.txt */; };
-		73CCB747264DB2AF0037F936 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 73CCB745264DB2AF0037F936 /* labels.txt */; };
-		73CCB748264DB2AF0037F936 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 73CCB745264DB2AF0037F936 /* labels.txt */; };
-		73CCB74A264DB2BB0037F936 /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 73CCB749264DB2BB0037F936 /* model_prototype.tflite */; };
-		73CCB74B264DB2BB0037F936 /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 73CCB749264DB2BB0037F936 /* model_prototype.tflite */; };
-		73CCB74C264DB2BB0037F936 /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 73CCB749264DB2BB0037F936 /* model_prototype.tflite */; };
 		73CCB750264DB7070037F936 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCB74F264DB7070037F936 /* SettingsViewController.swift */; };
 		73CCB752264E42F00037F936 /* ChangeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCB751264E42F00037F936 /* ChangeDataViewController.swift */; };
 		73CCB754264F1C870037F936 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCB753264F1C870037F936 /* SignUpViewController.swift */; };
 		73E7B092261D5B1D00203D60 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7B091261D5B1D00203D60 /* ProfileViewController.swift */; };
 		7D67D55B87FD53ACCE719CCA /* Pods_OptiCycle_OptiCycleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4362688FDDB0DE296B90D35 /* Pods_OptiCycle_OptiCycleUITests.framework */; };
+		9865F9892652C55000805F4F /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F9882652C55000805F4F /* FriendCell.swift */; };
+		9865F98E2652C65D00805F4F /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9865F98D2652C65D00805F4F /* FindFriendsViewController.swift */; };
+		989694A526505744007ECCA5 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 989694A426505744007ECCA5 /* labels.txt */; };
+		989694AA2650574D007ECCA5 /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 989694A92650574D007ECCA5 /* model_prototype.tflite */; };
+		989694E226506A53007ECCA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA4260D5BB2003AB521 /* Main.storyboard */; };
+		989694E626506A54007ECCA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA4260D5BB2003AB521 /* Main.storyboard */; };
 		E7041557FB3551E23465DB55 /* Pods_OptiCycleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,14 +94,16 @@
 		2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
 		3AF07442642DCE88E1946CE3 /* Pods-OptiCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle/Pods-OptiCycle.release.xcconfig"; sourceTree = "<group>"; };
 		736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileChildViewController.swift; sourceTree = "<group>"; };
-		73CCB745264DB2AF0037F936 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = "../../../model_prototype 2/labels.txt"; sourceTree = "<group>"; };
-		73CCB749264DB2BB0037F936 /* model_prototype.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model_prototype.tflite; path = "../../../model_prototype 2/model_prototype.tflite"; sourceTree = "<group>"; };
 		73CCB74F264DB7070037F936 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		73CCB751264E42F00037F936 /* ChangeDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataViewController.swift; sourceTree = "<group>"; };
 		73CCB753264F1C870037F936 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		73E7B091261D5B1D00203D60 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		74D2F5B10DCB5AF32AB7E24F /* Pods-OptiCycle-OptiCycleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8446DA0995105CEAC89EA1FB /* Pods-OptiCycleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycleTests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycleTests/Pods-OptiCycleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9865F9882652C55000805F4F /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		9865F98D2652C65D00805F4F /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
+		989694A426505744007ECCA5 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = "../../../Model Opticycle/labels.txt"; sourceTree = "<group>"; };
+		989694A92650574D007ECCA5 /* model_prototype.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model_prototype.tflite; path = "../../../Model Opticycle/model_prototype.tflite"; sourceTree = "<group>"; };
 		B6BDF389C9C6232B966AB222 /* Pods-OptiCycle-OptiCycleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2021AD562B407724DAC738B /* Pods_OptiCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +176,7 @@
 				73CCB74F264DB7070037F936 /* SettingsViewController.swift */,
 				73CCB751264E42F00037F936 /* ChangeDataViewController.swift */,
 				73CCB753264F1C870037F936 /* SignUpViewController.swift */,
+				9865F98D2652C65D00805F4F /* FindFriendsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				2B1B8F972616991C00C69AC4 /* PostCell.swift */,
 				2BA7FF0E261FC98E00FE0FE7 /* InfoCell.swift */,
 				2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */,
+				9865F9882652C55000805F4F /* FriendCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -213,7 +217,7 @@
 		2B98EC9D260D5BB2003AB521 /* OptiCycle */ = {
 			isa = PBXGroup;
 			children = (
-				73CCB744264DB28A0037F936 /* Model */,
+				989694962650568F007ECCA5 /* Model */,
 				2BA7FF2A261FCBED00FE0FE7 /* ModelHandlers */,
 				2BA7FF1C261FCB7C00FE0FE7 /* CameraFeed */,
 				2BA7FF13261FCA1B00FE0FE7 /* Views */,
@@ -274,11 +278,11 @@
 			path = ModelHandlers;
 			sourceTree = "<group>";
 		};
-		73CCB744264DB28A0037F936 /* Model */ = {
+		989694962650568F007ECCA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				73CCB749264DB2BB0037F936 /* model_prototype.tflite */,
-				73CCB745264DB2AF0037F936 /* labels.txt */,
+				989694A92650574D007ECCA5 /* model_prototype.tflite */,
+				989694A426505744007ECCA5 /* labels.txt */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,8 +398,8 @@
 				2B98ECAB260D5BB2003AB521 /* LaunchScreen.storyboard in Resources */,
 				7349531A262FDD770075A8B6 /* Assets.xcassets in Resources */,
 				2B98ECA6260D5BB2003AB521 /* Main.storyboard in Resources */,
-				73CCB746264DB2AF0037F936 /* labels.txt in Resources */,
-				73CCB74A264DB2BB0037F936 /* model_prototype.tflite in Resources */,
+				989694A526505744007ECCA5 /* labels.txt in Resources */,
+				989694AA2650574D007ECCA5 /* model_prototype.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,8 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73CCB74B264DB2BB0037F936 /* model_prototype.tflite in Resources */,
-				73CCB747264DB2AF0037F936 /* labels.txt in Resources */,
+				989694E226506A53007ECCA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,8 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73CCB74C264DB2BB0037F936 /* model_prototype.tflite in Resources */,
-				73CCB748264DB2AF0037F936 /* labels.txt in Resources */,
+				989694E626506A54007ECCA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +534,7 @@
 				2B1B8F802616937F00C69AC4 /* LoginViewController.swift in Sources */,
 				2B454BFE2622399C0013AED0 /* LocalStandardsViewCell.swift in Sources */,
 				73CCB752264E42F00037F936 /* ChangeDataViewController.swift in Sources */,
+				9865F98E2652C65D00805F4F /* FindFriendsViewController.swift in Sources */,
 				73CCB750264DB7070037F936 /* SettingsViewController.swift in Sources */,
 				2BA7FF26261FCBA600FE0FE7 /* CameraFeedManager.swift in Sources */,
 				2B98ECA3260D5BB2003AB521 /* ViewController.swift in Sources */,
@@ -545,6 +548,7 @@
 				2B98ECA1260D5BB2003AB521 /* SceneDelegate.swift in Sources */,
 				2BA7FF18261FCA5A00FE0FE7 /* CurvedView.swift in Sources */,
 				736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */,
+				9865F9892652C55000805F4F /* FriendCell.swift in Sources */,
 				73E7B092261D5B1D00203D60 /* ProfileViewController.swift in Sources */,
 				2B454BF9262238D70013AED0 /* LocalStandardsViewController.swift in Sources */,
 				2B1B8F982616991C00C69AC4 /* PostCell.swift in Sources */,
@@ -727,14 +731,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H8A6K5894T;
+				DEVELOPMENT_TEAM = 863HLDNY26;
 				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = OptiCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codepath.OptiCycle;
+				PRODUCT_BUNDLE_IDENTIFIER = codepath.OptiCycle1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -750,14 +754,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H8A6K5894T;
+				DEVELOPMENT_TEAM = 863HLDNY26;
 				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = OptiCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codepath.OptiCycle;
+				PRODUCT_BUNDLE_IDENTIFIER = codepath.OptiCycle1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

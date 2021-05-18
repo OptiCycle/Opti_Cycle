@@ -74,6 +74,14 @@ class SignUpViewController: UIViewController {
                     if success{
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         self.performSegue(withIdentifier: "loginSuccess", sender: nil)
+                        
+                        
+//                        user["plastic"] = 0
+//                        user["metal"] = 0
+//                        user["paper"] = 0
+                        
+                        
+                        print("\n\n\nNew user created")
                     }
                     else{
                         UserDefaults.standard.set(false, forKey: "isLoggedIn")
