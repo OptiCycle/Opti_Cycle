@@ -8,8 +8,9 @@
 import UIKit
 
 class FriendCell: UITableViewCell {
-
-
+    
+    @IBOutlet weak var background: UIView!
+    
     @IBOutlet weak var numberOfPostsLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!

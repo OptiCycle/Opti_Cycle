@@ -11,6 +11,14 @@ import AlamofireImage
 
 class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+ 
+    @IBAction func goToProfile(_ sender: Any) {
+        
+        print("Going to profile!")
+    }
+    
+    
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -49,6 +57,9 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell") as! FriendCell
+        
+        cell.background.layer.cornerRadius = 10
+        cell.background.layer.masksToBounds = true
     
         let user = users[indexPath.row]
         
@@ -74,6 +85,7 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
                 }
             })
         }
+
         
         return cell
     }
