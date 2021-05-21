@@ -46,6 +46,7 @@
 		98A93FF126545B5600C99B22 /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 98A93FF026545B5600C99B22 /* model_prototype.tflite */; };
 		98A93FF226545B5600C99B22 /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 98A93FF026545B5600C99B22 /* model_prototype.tflite */; };
 		98A93FF326545B5600C99B22 /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 98A93FF026545B5600C99B22 /* model_prototype.tflite */; };
+		98A9401B2655B12300C99B22 /* OtherUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9401A2655B12300C99B22 /* OtherUserProfileViewController.swift */; };
 		E7041557FB3551E23465DB55 /* Pods_OptiCycleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		9865F98D2652C65D00805F4F /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
 		98A93FE626545B4F00C99B22 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = "../../../Model Opticycle/labels.txt"; sourceTree = "<group>"; };
 		98A93FF026545B5600C99B22 /* model_prototype.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model_prototype.tflite; path = "../../../Model Opticycle/model_prototype.tflite"; sourceTree = "<group>"; };
+		98A9401A2655B12300C99B22 /* OtherUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserProfileViewController.swift; sourceTree = "<group>"; };
 		B6BDF389C9C6232B966AB222 /* Pods-OptiCycle-OptiCycleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2021AD562B407724DAC738B /* Pods_OptiCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +236,7 @@
 				2B98ECA7260D5BB2003AB521 /* Assets.xcassets */,
 				2B98ECA9260D5BB2003AB521 /* LaunchScreen.storyboard */,
 				2B98ECAC260D5BB2003AB521 /* Info.plist */,
+				98A9401A2655B12300C99B22 /* OtherUserProfileViewController.swift */,
 			);
 			path = OptiCycle;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				2B454BF42622331E0013AED0 /* ResultsViewController.swift in Sources */,
 				2B98EC9F260D5BB2003AB521 /* AppDelegate.swift in Sources */,
 				2BA7FF2C261FCC0400FE0FE7 /* ModelDataHandler.swift in Sources */,
+				98A9401B2655B12300C99B22 /* OtherUserProfileViewController.swift in Sources */,
 				2BA7FF34261FCC2100FE0FE7 /* CVPixelBufferExtension.swift in Sources */,
 				2B98ECA1260D5BB2003AB521 /* SceneDelegate.swift in Sources */,
 				2BA7FF18261FCA5A00FE0FE7 /* CurvedView.swift in Sources */,

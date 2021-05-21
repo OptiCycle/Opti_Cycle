@@ -9,6 +9,8 @@ import UIKit
 
 class FriendCell: UITableViewCell {
     
+    @IBOutlet weak var button: UIButton!
+    
     @IBOutlet weak var background: UIView!
     
     @IBOutlet weak var numberOfPostsLabel: UILabel!

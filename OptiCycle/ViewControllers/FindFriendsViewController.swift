@@ -10,19 +10,31 @@ import Parse
 import AlamofireImage
 
 class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
- 
-    @IBAction func goToProfile(_ sender: Any) {
-        
-        print("Going to profile!")
-    }
-    
-    
-    
+
     
     @IBOutlet weak var tableView: UITableView!
     
     var users = [PFObject]()
+    var buttons = [UIButton]()
+    
+    @IBAction func goToProfile(_ sender: Any) {
+        
+        
+        var correctUser = users[0]
+        
+        // find correct user
+        for i in 0..<buttons.count {
+            if buttons[i] == sender as! NSObject {
+                correctUser = users[i]
+            }
+        }
+        
+        let username = correctUser["username"] as! String
+        print("\n\(username) was clicked!")
+        
+        print("Created at \(correctUser.createdAt as! Date)")
+        correctUser.setValue("Does it work?", forKey: "test")
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -30,7 +42,7 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         let query = PFQuery(className:"_User")
         
 //        query.includeKey("objectId")
-        query.limit = 20
+//        query.limit = 20
         
         query.findObjectsInBackground { (users, error) in
             if users != nil {
@@ -58,9 +70,10 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell") as! FriendCell
         
+        cell.selectionStyle = .none
         cell.background.layer.cornerRadius = 10
         cell.background.layer.masksToBounds = true
-    
+
         let user = users[indexPath.row]
         
         // set username
@@ -68,8 +81,20 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         cell.usernameLabel.text = username
         print(username)
         
+        cell.button.setTitle(username, for: .normal)
+        cell.button.setTitleColor(UIColor.clear, for: .normal)
+        
+        //Dont add to array if already in array
+        if buttons.contains(cell.button) {
+            print("Already added in array")
+        }
+        
+        else {
+            buttons.append(cell.button)
+        }
+
         //set the number of posts made
-        let numOfPosts = "Posts made: 0"
+        let numOfPosts = "Objects Recycled: "
         cell.numberOfPostsLabel.text = numOfPosts
         
         //set the profile picture
@@ -79,8 +104,15 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
                     DispatchQueue.main.async {
 
                         let image = UIImage(data: data!)
-
+                        
                         cell.profilePicture.image = image
+                        
+                        cell.profilePicture.layer.borderWidth = 2
+                        cell.profilePicture.layer.masksToBounds = false
+                        cell.profilePicture.layer.borderColor = UIColor.green.cgColor
+                        cell.profilePicture.layer.cornerRadius = cell.profilePicture.frame.height/2
+                        cell.profilePicture.clipsToBounds = true
+
                     }
                 }
             })
