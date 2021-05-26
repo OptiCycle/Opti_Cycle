@@ -9,12 +9,14 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     var users = [PFObject]()
+    var filteredUsers = [PFObject]()
     var buttons = [UIButton]()
     
     @IBAction func goToProfile(_ sender: Any) {
@@ -47,6 +49,7 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         query.findObjectsInBackground { (users, error) in
             if users != nil {
                 self.users = users!
+                self.filteredUsers = self.users
                 self.tableView.reloadData()
             }
         }
@@ -58,12 +61,43 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
 
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange text: String) {
+        
+        if text.isEmpty {
+            self.filteredUsers = self.users
+            print("No text")
+        } else {
+            
+            self.filteredUsers = self.users.filter({ (user: PFObject) -> Bool in
+
+                let username = user["username"] as! String
+                if username.range(of: text, options: .caseInsensitive, range: nil, locale: nil) != nil {
+                    return true
+                } else {
+                    return false
+                }
+            })
+
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
                         
-        return users.count
+        return filteredUsers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,7 +108,7 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         cell.background.layer.cornerRadius = 10
         cell.background.layer.masksToBounds = true
 
-        let user = users[indexPath.row]
+        let user = filteredUsers[indexPath.row]
         
         // set username
         let username = user["username"] as! String
