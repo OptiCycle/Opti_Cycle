@@ -14,6 +14,7 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noUsersLabel: UILabel!
     
     var users = [PFObject]()
     var filteredUsers = [PFObject]()
@@ -62,13 +63,15 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
+        
+        noUsersLabel.isHidden = true
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange text: String) {
         
         if text.isEmpty {
             self.filteredUsers = self.users
-            print("No text")
+            noUsersLabel.isHidden = true
         } else {
             
             self.filteredUsers = self.users.filter({ (user: PFObject) -> Bool in
@@ -80,6 +83,17 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
                     return false
                 }
             })
+            
+            
+            print(filteredUsers.count)
+            
+            if filteredUsers.count != 0 {
+                noUsersLabel.isHidden = true
+            }
+            else {
+                noUsersLabel.isHidden = false
+            }
+            
 
         }
         

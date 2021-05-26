@@ -1428,6 +1428,13 @@
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NO USERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPB-Gv-dtJ">
+                                <rect key="frame" x="135" y="394" width="144" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Kj-Pz-QPe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1437,6 +1444,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="noUsersLabel" destination="ZPB-Gv-dtJ" id="0pC-kX-oRN"/>
                         <outlet property="searchBar" destination="g8e-c8-ErO" id="h9V-bj-acJ"/>
                         <outlet property="tableView" destination="B2h-FP-DER" id="IP4-LR-ix3"/>
                     </connections>
