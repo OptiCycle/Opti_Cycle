@@ -29,6 +29,7 @@
 		2BA7FF26261FCBA600FE0FE7 /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF25261FCBA600FE0FE7 /* CameraFeedManager.swift */; };
 		2BA7FF2C261FCC0400FE0FE7 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF2B261FCC0400FE0FE7 /* ModelDataHandler.swift */; };
 		2BA7FF34261FCC2100FE0FE7 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */; };
+		7310A3C7265E2998009DAC1D /* BadgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310A3C6265E2998009DAC1D /* BadgeCell.swift */; };
 		7349531A262FDD770075A8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA7260D5BB2003AB521 /* Assets.xcassets */; };
 		736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */; };
 		73CCB750264DB7070037F936 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCB74F264DB7070037F936 /* SettingsViewController.swift */; };
@@ -98,6 +99,7 @@
 		2BA7FF2B261FCC0400FE0FE7 /* ModelDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
 		2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
 		3AF07442642DCE88E1946CE3 /* Pods-OptiCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle/Pods-OptiCycle.release.xcconfig"; sourceTree = "<group>"; };
+		7310A3C6265E2998009DAC1D /* BadgeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCell.swift; sourceTree = "<group>"; };
 		736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileChildViewController.swift; sourceTree = "<group>"; };
 		73CCB74F264DB7070037F936 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		73CCB751264E42F00037F936 /* ChangeDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataViewController.swift; sourceTree = "<group>"; };
@@ -107,8 +109,8 @@
 		8446DA0995105CEAC89EA1FB /* Pods-OptiCycleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycleTests.debug.xcconfig"; path = "Target Support Files/Pods-OptiCycleTests/Pods-OptiCycleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9865F9882652C55000805F4F /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		9865F98D2652C65D00805F4F /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
-		98A93FE626545B4F00C99B22 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = "../../../Model Opticycle/labels.txt"; sourceTree = "<group>"; };
-		98A93FF026545B5600C99B22 /* model_prototype.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model_prototype.tflite; path = "../../../Model Opticycle/model_prototype.tflite"; sourceTree = "<group>"; };
+		98A93FE626545B4F00C99B22 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = "../../../model_prototype 2/labels.txt"; sourceTree = "<group>"; };
+		98A93FF026545B5600C99B22 /* model_prototype.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model_prototype.tflite; path = "../../../model_prototype 2/model_prototype.tflite"; sourceTree = "<group>"; };
 		98A9401A2655B12300C99B22 /* OtherUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserProfileViewController.swift; sourceTree = "<group>"; };
 		B6BDF389C9C6232B966AB222 /* Pods-OptiCycle-OptiCycleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +196,7 @@
 				2BA7FF0E261FC98E00FE0FE7 /* InfoCell.swift */,
 				2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */,
 				9865F9882652C55000805F4F /* FriendCell.swift */,
+				7310A3C6265E2998009DAC1D /* BadgeCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				73CCB754264F1C870037F936 /* SignUpViewController.swift in Sources */,
 				2BA7FF1E261FCB9700FE0FE7 /* PreviewView.swift in Sources */,
 				2B1B8F802616937F00C69AC4 /* LoginViewController.swift in Sources */,
+				7310A3C7265E2998009DAC1D /* BadgeCell.swift in Sources */,
 				2B454BFE2622399C0013AED0 /* LocalStandardsViewCell.swift in Sources */,
 				73CCB752264E42F00037F936 /* ChangeDataViewController.swift in Sources */,
 				9865F98E2652C65D00805F4F /* FindFriendsViewController.swift in Sources */,
