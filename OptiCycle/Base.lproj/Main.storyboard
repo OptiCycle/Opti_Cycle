@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OOv-cj-6ey">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OOv-cj-6ey">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -25,7 +25,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="125" id="McE-zF-Ltp" customClass="PostCell" customModule="OptiCycle" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="125"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="McE-zF-Ltp" id="YMV-tQ-KYH">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
@@ -458,7 +458,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjr-8G-VZy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="rgY-BF-2cj">
                     <connections>
-                        <action selector="onTap:" destination="OOv-cj-6ey" id="yL1-8s-k0J"/>
+                        <action selector="onTap:" destination="OOv-cj-6ey" id="er9-c5-mpB"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -583,6 +583,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fPv-ua-u91"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="B4l-9S-X4h" firstAttribute="top" secondItem="rmX-Bk-XAw" secondAttribute="bottom" constant="10" id="003-WZ-Llh"/>
                             <constraint firstItem="Z2D-yi-Gul" firstAttribute="top" secondItem="ON5-EC-ygq" secondAttribute="bottom" constant="51" id="1Lu-o9-Pqo"/>
@@ -628,6 +629,9 @@
                             <constraint firstItem="yQZ-lY-1bk" firstAttribute="leading" secondItem="fPv-ua-u91" secondAttribute="leading" constant="50" id="yCo-te-kXX"/>
                             <constraint firstItem="3ZC-bX-Usy" firstAttribute="top" secondItem="RGI-Ej-IQV" secondAttribute="bottom" constant="30" id="yp4-BE-yi1"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="S2e-cS-MJj" appends="YES" id="UyB-fE-21d"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="umt-bn-rZQ"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -650,6 +654,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tH5-46-mfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="8OG-oY-WaY" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="S2e-cS-MJj">
+                    <connections>
+                        <action selector="onTapBackground:" destination="PX6-QP-cCf" id="InE-ML-fie"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="292.75362318840581" y="-698.4375"/>
         </scene>
@@ -666,8 +675,8 @@
                         <color key="selectedImageTintColor" red="0.62745100259999997" green="0.89803922179999995" blue="0.64705884459999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="al4-6j-gPx" kind="relationship" relationship="viewControllers" id="Fv9-Bf-Het"/>
                         <segue destination="ytz-W8-IcA" kind="relationship" relationship="viewControllers" id="tzI-nd-Tab"/>
+                        <segue destination="al4-6j-gPx" kind="relationship" relationship="viewControllers" id="Fv9-Bf-Het"/>
                         <segue destination="n0Q-pA-0gt" kind="relationship" relationship="viewControllers" id="cDz-px-rzT"/>
                         <segue destination="bhR-kd-VuT" kind="relationship" relationship="viewControllers" id="A6X-dB-d67"/>
                     </connections>
@@ -751,7 +760,7 @@
                         <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="aBY-fq-1an">
-                                <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                <rect key="frame" x="20" y="49.5" width="374" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aBY-fq-1an" id="dMs-hO-6m9">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -1087,7 +1096,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" rowHeight="199" id="pvv-rA-flP" customClass="InfoCell" customModule="OptiCycle" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="199"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="199"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pvv-rA-flP" id="ElR-lD-Fag">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
@@ -1260,7 +1269,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocalStandardsViewCell" rowHeight="149" id="Rpo-ea-8lA" customClass="LocalStandardsViewCell" customModule="OptiCycle" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="149"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="149"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rpo-ea-8lA" id="x6X-a4-nEo">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
@@ -1360,7 +1369,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FriendCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="168" id="ejQ-4V-NT1" customClass="FriendCell" customModule="OptiCycle">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="168"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="168"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ejQ-4V-NT1" id="WjX-hG-DYk">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>

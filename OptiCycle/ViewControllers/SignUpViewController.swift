@@ -57,6 +57,10 @@ class SignUpViewController: UIViewController {
         signInButton.layer.borderColor = UIColor.black.cgColor
     }
     
+   
+    @IBAction func onTapBackground(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     @IBAction func onSignUp(_ sender: Any) {
         //There is an entry for all boxes

@@ -723,14 +723,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 863HLDNY26;
-				EXCLUDED_ARCHS = arm64;
+				DEVELOPMENT_TEAM = V848CS48D4;
 				INFOPLIST_FILE = OptiCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codepath.OptiCycle1;
+				PRODUCT_BUNDLE_IDENTIFIER = codepath.OptiCycle2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -746,14 +745,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 863HLDNY26;
-				EXCLUDED_ARCHS = arm64;
+				DEVELOPMENT_TEAM = V848CS48D4;
 				INFOPLIST_FILE = OptiCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codepath.OptiCycle1;
+				PRODUCT_BUNDLE_IDENTIFIER = codepath.OptiCycle2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
