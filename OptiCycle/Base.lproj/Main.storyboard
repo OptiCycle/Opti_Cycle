@@ -271,10 +271,6 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="135" height="180"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="allBadgesBadge" translatesAutoresizingMaskIntoConstraints="NO" id="YOf-Nr-ati">
-                                                                    <rect key="frame" x="10" y="8" width="115" height="115"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recycle 100 electronic items" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu7-q0-Ibt">
                                                                     <rect key="frame" x="8" y="131" width="119" height="41"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -282,6 +278,11 @@
                                                                     <color key="textColor" red="0.62745100259999997" green="0.89803922179999995" blue="0.64705884459999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3-MilestoneBadge" translatesAutoresizingMaskIntoConstraints="NO" id="YOf-Nr-ati">
+                                                                    <rect key="frame" x="10" y="8" width="115" height="115"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </collectionViewCellContentView>
@@ -1487,7 +1488,7 @@
         <segue reference="0uh-YN-xg9"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="allBadgesBadge" width="170.5" height="170.5"/>
+        <image name="3-MilestoneBadge" width="170.5" height="170.5"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.down.circle.fill" catalog="system" width="128" height="121"/>

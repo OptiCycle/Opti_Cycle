@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "batteriesBadge@1x.png",
+      "filename" : "250ofEachBadge@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "batteriesBadge@2x.png",
+      "filename" : "250ofEachBadge@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "batteriesBadge@3x.png",
+      "filename" : "250ofEachBadge@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
