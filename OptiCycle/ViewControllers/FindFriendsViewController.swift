@@ -36,7 +36,6 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         print("\n\(username) was clicked!")
         
         print("Created at \(correctUser.createdAt as! Date)")
-        correctUser.setValue("Does it work?", forKey: "test")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,11 +50,32 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
             if users != nil {
                 self.users = users!
                 self.filteredUsers = self.users
+                
+                var i = 0
+                
+                while true {
+                                                
+                    if self.filteredUsers[i]["totalPosts"] as! Int > self.filteredUsers[i + 1]["totalPosts"] as! Int {
+                        
+                        self.filteredUsers.swapAt(i, i + 1)
+                        
+                        i = 0
+                    }
+                    else {
+                        i += 1
+                    }
+                    
+                    if i == self.filteredUsers.count - 1 {
+                        break
+                    }
+                }
+                
+                self.filteredUsers.reverse()
+                
                 self.tableView.reloadData()
             }
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +92,28 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         if text.isEmpty {
             self.filteredUsers = self.users
             noUsersLabel.isHidden = true
+            
+            var i = 0
+            
+            while true {
+                                            
+                if self.filteredUsers[i]["totalPosts"] as! Int > self.filteredUsers[i + 1]["totalPosts"] as! Int {
+                    
+                    self.filteredUsers.swapAt(i, i + 1)
+                    
+                    i = 0
+                }
+                else {
+                    i += 1
+                }
+                
+                if i == self.filteredUsers.count - 1 {
+                    break
+                }
+            }
+            
+            self.filteredUsers.reverse()
+            
         } else {
             
             self.filteredUsers = self.users.filter({ (user: PFObject) -> Bool in
@@ -85,7 +127,28 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
             })
             
             
-            print(filteredUsers.count)
+            var i = 0
+            
+            if filteredUsers.count > 1 {
+                while true {
+                                                
+                    if self.filteredUsers[i]["totalPosts"] as! Int > self.filteredUsers[i + 1]["totalPosts"] as! Int {
+                        
+                        self.filteredUsers.swapAt(i, i + 1)
+                        
+                        i = 0
+                    }
+                    else {
+                        i += 1
+                    }
+                    
+                    if i == self.filteredUsers.count - 1 {
+                        break
+                    }
+                }
+            }
+                
+            self.filteredUsers.reverse()
             
             if filteredUsers.count != 0 {
                 noUsersLabel.isHidden = true
@@ -93,8 +156,6 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
             else {
                 noUsersLabel.isHidden = false
             }
-            
-
         }
         
         self.tableView.reloadData()
@@ -126,15 +187,29 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         
         // set username
         let username = user["username"] as! String
-        cell.usernameLabel.text = username
+        
+        let currentUser = PFUser.current() as! PFObject
+        
+        if currentUser["username"] as! String == username {
+            
+            print("\n\nENTERED")
+            cell.usernameLabel.text = username + " (You)"
+//            cell.usernameLabel.font = UIFont(name: "System-Heavy", size: 19)
+        }
+        else {
+            cell.usernameLabel.text = username
+        }
+        
         print(username)
+
+
         
         cell.button.setTitle(username, for: .normal)
         cell.button.setTitleColor(UIColor.clear, for: .normal)
         
         //Dont add to array if already in array
         if buttons.contains(cell.button) {
-            print("Already added in array")
+//            print("Already added in array")
         }
         
         else {
@@ -142,8 +217,12 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         }
 
         //set the number of posts made
-        let numOfPosts = "Objects Recycled: "
-        cell.numberOfPostsLabel.text = numOfPosts
+        let placeHolder = "Objects Recycled: "
+        cell.numberOfPostsLabel.text = placeHolder
+        
+//        print("\(user["totalPosts"] as! Int)")
+        
+        cell.numberLabel.text = "\(user["totalPosts"] as! Int)"
         
         //set the profile picture
         if let imageFile: PFFileObject = user["profileImage"] as? PFFileObject {

@@ -76,9 +76,12 @@ class SignUpViewController: UIViewController {
                         self.performSegue(withIdentifier: "loginSuccess", sender: nil)
                         
                         
-//                        user["plastic"] = 0
-//                        user["metal"] = 0
-//                        user["paper"] = 0
+                        user["plastic"] = 0
+                        user["metal"] = 0
+                        user["paper"] = 0
+                        user["totalPosts"] = 0
+                        
+                        user.saveInBackground()
                         
                         
                         print("\n\n\nNew user created")
