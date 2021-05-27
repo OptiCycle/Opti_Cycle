@@ -11,6 +11,7 @@
 		2B1B8F802616937F00C69AC4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B8F7F2616937F00C69AC4 /* LoginViewController.swift */; };
 		2B1B8F922616980B00C69AC4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B8F912616980B00C69AC4 /* FeedViewController.swift */; };
 		2B1B8F982616991C00C69AC4 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B8F972616991C00C69AC4 /* PostCell.swift */; };
+		2B42F5B9265F4838003B9DC2 /* ShopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42F5B8265F4838003B9DC2 /* ShopCollectionViewController.swift */; };
 		2B454BF42622331E0013AED0 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF32622331E0013AED0 /* ResultsViewController.swift */; };
 		2B454BF9262238D70013AED0 /* LocalStandardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF8262238D70013AED0 /* LocalStandardsViewController.swift */; };
 		2B454BFE2622399C0013AED0 /* LocalStandardsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */; };
@@ -67,6 +68,7 @@
 		2B1B8F7F2616937F00C69AC4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2B1B8F912616980B00C69AC4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		2B1B8F972616991C00C69AC4 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		2B42F5B8265F4838003B9DC2 /* ShopCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewController.swift; sourceTree = "<group>"; };
 		2B454BF32622331E0013AED0 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2B454BF8262238D70013AED0 /* LocalStandardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStandardsViewController.swift; sourceTree = "<group>"; };
 		2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStandardsViewCell.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				73CCB751264E42F00037F936 /* ChangeDataViewController.swift */,
 				73CCB753264F1C870037F936 /* SignUpViewController.swift */,
 				9865F98D2652C65D00805F4F /* FindFriendsViewController.swift */,
+				2B42F5B8265F4838003B9DC2 /* ShopCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				2BA7FF05261FC87800FE0FE7 /* InferenceViewController.swift in Sources */,
 				2B454BF42622331E0013AED0 /* ResultsViewController.swift in Sources */,
 				2B98EC9F260D5BB2003AB521 /* AppDelegate.swift in Sources */,
+				2B42F5B9265F4838003B9DC2 /* ShopCollectionViewController.swift in Sources */,
 				2BA7FF2C261FCC0400FE0FE7 /* ModelDataHandler.swift in Sources */,
 				98A9401B2655B12300C99B22 /* OtherUserProfileViewController.swift in Sources */,
 				2BA7FF34261FCC2100FE0FE7 /* CVPixelBufferExtension.swift in Sources */,

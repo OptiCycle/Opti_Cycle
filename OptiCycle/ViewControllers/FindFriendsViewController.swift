@@ -84,6 +84,8 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.dataSource = self
         searchBar.delegate = self
         
+        tableView.keyboardDismissMode = UIScrollView.KeyboardDismissMode.interactive
+        
         noUsersLabel.isHidden = true
     }
     

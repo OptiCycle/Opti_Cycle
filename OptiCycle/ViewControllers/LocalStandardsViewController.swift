@@ -44,6 +44,8 @@ class LocalStandardsViewController: UIViewController, UITableViewDataSource, UIT
         
         localtableView.dataSource = self
         localtableView.delegate = self
+        
+        localtableView.keyboardDismissMode = UIScrollView.KeyboardDismissMode.interactive
 
         // Do any additional setup after loading the view.
     }
