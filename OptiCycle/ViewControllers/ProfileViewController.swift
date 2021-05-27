@@ -11,71 +11,123 @@ import MBCircularProgressBar
 
 class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    @IBOutlet weak var postsProgressBarView: MBCircularProgressBarView!
-    @IBOutlet weak var treesProgressBarView: MBCircularProgressBarView!
-    @IBOutlet weak var badgesProgressBarView: MBCircularProgressBarView!
+    @IBOutlet weak var plasticsProgressBar: MBCircularProgressBarView!
+    @IBOutlet weak var badgesProgressBar: MBCircularProgressBarView!
+    @IBOutlet weak var paperProgressBar: MBCircularProgressBarView!
+    @IBOutlet weak var metalsProgressBar: MBCircularProgressBarView!
+    @IBOutlet weak var glassProgressBar: MBCircularProgressBarView!
+    @IBOutlet weak var milestoneProgressBar: MBCircularProgressBarView!
+    
+    
+   
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var badges: [UIImage] = [
-        //Not including lockedBadge image
-        UIImage(named: "1-MilestoneBadge")!,
-        UIImage(named: "2-MilestoneBadge")!,
-        UIImage(named: "3-MilestoneBadge")!,
-        UIImage(named: "50ofEachBadge")!,
-        UIImage(named: "250ofEachBadge")!,
-        UIImage(named: "500ofEachBadge")!,
-        UIImage(named: "plasticsBadge")!,
-        UIImage(named: "glassBadge")!,
-        UIImage(named: "metalsBadge")!,
-        UIImage(named: "paperBadge")!,
-        UIImage(named: "firstItemBadge")!,
-        UIImage(named: "allBadgesBadge")!
+    var badges: [NSDictionary] = [
+        [
+            "badgeImage":  UIImage(named: "1-MilestoneBadge")!,
+            "task": "Recycle 50 Pieces of Trash"
+        ],[
+            "badgeImage":  UIImage(named: "2-MilestoneBadge")!,
+            "task": "Recycle 200 Pieces of Trash"
+        ],[
+            "badgeImage":  UIImage(named: "3-MilestoneBadge")!,
+            "task": "Recycle 500 Pieces of Trash"
+        ],[
+            "badgeImage":  UIImage(named: "50ofEachBadge")!,
+            "task": "Recycle 50 of Each Type of Item"
+        ],[
+            "badgeImage":  UIImage(named: "250ofEachBadge")!,
+            "task": "Recycle 250 of Each Type of Item"
+        ],[
+            "badgeImage":  UIImage(named: "500ofEachBadge")!,
+            "task": "Recycle 500 of Each Type of Item"
+        ],[
+            "badgeImage":  UIImage(named: "plasticsBadge")!,
+            "task": "Recycle 100 Plastic Type Items"
+        ],[
+            "badgeImage":  UIImage(named: "glassBadge")!,
+            "task": "Recycle 100 Glass Type Items"
+        ],[
+            "badgeImage":  UIImage(named: "metalsBadge")!,
+            "task": "Recycle 100 Metal Type Items"
+        ],[
+            "badgeImage":  UIImage(named: "paperBadge")!,
+            "task": "Recycle 100 Paper Type Items"
+        ],[
+            "badgeImage":  UIImage(named: "firstItemBadge")!,
+            "task": "Recycle One Piece of Trash"
+        ],[
+            "badgeImage":  UIImage(named: "allBadgesBadge")!,
+            "task": "Collect all Badges"
+        ],
     ]
+    
+    var test: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //print(" HEYYYY THIS IS THE TASK:  \(badge[0]["badgeImage"])")
 
         // Do any additional setup after loading the view.
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        
-        layout.minimumLineSpacing = 4
-        layout.minimumInteritemSpacing = 4
-        
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
-        layout.itemSize = CGSize(width: width, height: 180)
-        
-        self.postsProgressBarView.value = 0
-        self.treesProgressBarView.value = 0
-        self.badgesProgressBarView.value = 0
+        self.plasticsProgressBar.value = 0
+        self.paperProgressBar.value = 0
+        self.metalsProgressBar.value = 0
+        self.glassProgressBar.value = 0
+        self.milestoneProgressBar.value = 0
+        self.badgesProgressBar.value = 0
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         // Make postsCountLabel equal to amount of posts user has posted
         let query = PFQuery(className: "Posts")
         query.whereKey("author", equalTo: PFUser.current() ?? nil)
-        
+
         query.countObjectsInBackground { (count: Int32, error: Error?) in
             if let error = error {
                 // Request failed
                 print(error.localizedDescription)
             } else {
                 UIView.animate(withDuration: 2.0) {
-                    self.postsProgressBarView.value = CGFloat(count)
+                    self.milestoneProgressBar.value = CGFloat(count)
                 }
             }
         }
         
         UIView.animate(withDuration: 2.0)
         {
-            self.treesProgressBarView.value = 0
+            self.plasticsProgressBar.value = 50
         }
         
         UIView.animate(withDuration: 2.0)
         {
-            self.badgesProgressBarView.value = 0
+            self.badgesProgressBar.value = 6
+        }
+
+        
+        UIView.animate(withDuration: 2.0)
+        {
+            self.milestoneProgressBar.value = 375
+        }
+        
+        UIView.animate(withDuration: 2.0)
+        {
+            self.glassProgressBar.value = 39
+        }
+        
+        UIView.animate(withDuration: 2.0)
+        {
+            self.paperProgressBar.value = 22
+        }
+        
+        UIView.animate(withDuration: 2.0)
+        {
+            self.metalsProgressBar.value = 64
         }
     }
     
@@ -106,13 +158,22 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Badge", for: indexPath) as! BadgeCell
         
-        cell.badgeImageView.image = badges[indexPath.row]
+        // Set up Cell's image
+        if test {
+            cell.badgeImageView.image = (badges[indexPath.row]["badgeImage"] as! UIImage)
+        }
+        else {
+            cell.badgeImageView.image = UIImage(named: "lockedBadge")
+        }
         cell.badgeImageView.backgroundColor = UIColor.darkGray
         cell.badgeImageView.layer.borderWidth = 2
         cell.badgeImageView.layer.masksToBounds = false
         cell.badgeImageView.layer.borderColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
         cell.badgeImageView.layer.cornerRadius = cell.badgeImageView.frame.height/2
         cell.badgeImageView.clipsToBounds = true
+        
+        // Set up Cell's label
+        cell.badgeLabel.text = (badges[indexPath.row]["task"] as! String)
         
         // Color of mintGreen being used is:
         // UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
