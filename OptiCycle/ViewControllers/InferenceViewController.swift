@@ -98,6 +98,7 @@ class InferenceViewController: UIViewController {
    */
     
     @IBAction func onRecycleButton(_ sender: Any) {
+        let user = PFUser.current() as! PFUser
         let post = PFObject(className: "Posts")
         
         post["author"] = PFUser.current()
@@ -110,6 +111,22 @@ class InferenceViewController: UIViewController {
             return
         }
         post["item"] = item
+        
+        // Increment User's type of trash count
+        user.incrementKey(item, byAmount: 1)
+        user.incrementKey("totalPosts", byAmount: 1)
+        checkIfUserGotBadge(currentUser: PFUser.current()!)
+        user.saveInBackground
+        {(success, error) in
+            if success{
+                print("Successfully Incremented \(user.username)'s Recycle Count")
+            }
+            else{
+                print("error: \(error?.localizedDescription)")
+            }
+        }
+        // End of increment
+        
         post["confidence"] = confidence
         let imageName = getImageLabel(item: item)
         post["image_label"] = imageName
@@ -138,6 +155,88 @@ class InferenceViewController: UIViewController {
             }
         }
     }
+    
+    // Start of Check for Badge
+    func checkIfUserGotBadge(currentUser: PFUser) {
+        let query = PFQuery(className:"Badges")
+        query.whereKey("author", equalTo: currentUser)
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print("\(error.localizedDescription)")
+            } else if let objects = objects {
+                // The find succeeded.
+                // Do something with the found objects
+                for object in objects {
+                    if (object["badgeCount"] as! Int) != 12 {
+                        let glass = currentUser["glass"] as! Int
+                        let plastic = currentUser["plastic"] as! Int
+                        let metal = currentUser["metal"] as! Int
+                        let paper = currentUser["paper"] as! Int
+                        let posts = currentUser["totalPosts"] as! Int
+                        
+                        // Conditions for badge 1, 2, 3
+                        if posts < 500{
+                            if (object["badge1"] as! Bool == false) && posts >= 50 {
+                                object["badge1"] = true
+                                object.incrementKey("badgeCount", byAmount: 1)
+                            }
+                            if (object["badge2"] as! Bool == false) && posts >= 200 {
+                                object["badge2"] = true
+                                object.incrementKey("badgeCount", byAmount: 1)
+                            }
+                            if (object["badge3"] as! Bool == false) && posts >= 500 {
+                                object["badge3"] = true
+                                object.incrementKey("badgeCount", byAmount: 1)
+                            }
+                        }
+                        // End of conditions 1, 2, 3
+                        
+                        // Conditions for badge 4, 5, 6
+                        if (object["badge4"] as! Bool == false) && (glass >= 50) && (metal >= 50) && (plastic >= 50) && (paper >= 50){
+                            object["badge4"] = true
+                            object.incrementKey("badgeCount", byAmount: 1)
+                        }
+                        if (object["badge5"] as! Bool == false) && (glass >= 250) && (metal >= 250) && (plastic >= 250) && (paper >= 250){
+                            object["badge5"] = true
+                            object.incrementKey("badgeCount", byAmount: 1)
+                        }
+                        if (object["badge6"] as! Bool == false) && (glass >= 500) && (metal >= 500) && (plastic >= 500) && (paper >= 500){
+                            object["badge6"] = true
+                            object.incrementKey("badgeCount", byAmount: 1)
+                        }
+                        // End of Conditions 4, 5, 6
+                        
+                        if (object["badge7"] as! Bool == false) && plastic >= 100 {
+                            object["badge7"] = true
+                            object.incrementKey("badgeCount", byAmount: 1)
+                        }
+                        if (object["badge8"] as! Bool == false) && glass >= 100 {
+                            object["badge8"] = true
+                            object.incrementKey("badgeCount", byAmount: 1)
+                        }
+                        if (object["badge9"] as! Bool == false) && metal >= 100 {
+                            object["badge9"] = true
+                            object.incrementKey("badgeCount", byAmount: 1)
+                        }
+                        if (object["badge10"] as! Bool == false) && paper >= 100 {
+                            object["badge10"] = true
+                            object.incrementKey("badgeCount", byAmount: 1)
+                        }
+                        if (object["badge11"] as! Bool == false) && posts >= 1 {
+                            object["badge11"] = true
+                            object.incrementKey("badgeCount", byAmount: 1)
+                        }
+                        if (object["badge12"] as! Bool == false) && (object["badgeCount"] as! Int) == 11 {
+                            object["badge12"] = true
+                            object.incrementKey("badgeCount", byAmount: 1)
+                        }
+                    }
+                    object.saveInBackground()
+                }
+            }
+        }
+    } // End of Check for Badge
     
     func getImageLabel(item: String) -> String{
         

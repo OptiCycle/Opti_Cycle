@@ -66,12 +66,12 @@ class SignUpViewController: UIViewController {
         //There is an entry for all boxes
         if usernameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != ""{
             if passwordTextField.text == confirmPasswordTextField.text {
+                
+                // Establish User's Information
                 let user = PFUser()
                 user.username = usernameTextField.text
                 user.password = passwordTextField.text
                 user.email = emailTextField.text
-
-
                 user["firstTimer"] = "true"
 
                 user.signUpInBackground { (success, error) in
@@ -79,16 +79,43 @@ class SignUpViewController: UIViewController {
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         self.performSegue(withIdentifier: "loginSuccess", sender: nil)
                         
-                        
                         user["plastic"] = 0
                         user["metal"] = 0
                         user["paper"] = 0
+                        user["glass"] = 0
                         user["totalPosts"] = 0
                         
                         user.saveInBackground()
-                        
-                        
                         print("\n\n\nNew user created")
+                        
+                        // Create Badge Tracking System for User
+                        let badge = PFObject(className:"Badges")
+                        badge["author"] = PFUser.current()
+                        badge["badgeCount"] = 0
+                        badge["badge1"] = false
+                        badge["badge2"] = false
+                        badge["badge3"] = false
+                        badge["badge4"] = false
+                        badge["badge5"] = false
+                        badge["badge6"] = false
+                        badge["badge7"] = false
+                        badge["badge8"] = false
+                        badge["badge9"] = false
+                        badge["badge10"] = false
+                        badge["badge11"] = false
+                        badge["badge12"] = false
+
+                        badge.saveInBackground { (succeeded, error)  in
+                            if (succeeded) {
+                                // The object has been saved.
+                                print("Successfully Created \(user.username)'s Badge Tracker")
+                            } else {
+                                // There was a problem, check error.description
+                                print("error: \(error?.localizedDescription)")
+                            }
+                        }
+                        // End of creating Badge Parse Server for User's Badge Tracking System
+                        
                     }
                     else{
                         UserDefaults.standard.set(false, forKey: "isLoggedIn")

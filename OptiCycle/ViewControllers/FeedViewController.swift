@@ -117,7 +117,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let imageLabel = post["image_label"] as! String
         cell.postImage.image = UIImage(named: imageLabel)
 
-        user[item] = user[item] as! Int + 1
         user.saveInBackground()
         
         return cell

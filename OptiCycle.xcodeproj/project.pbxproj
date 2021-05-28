@@ -31,6 +31,12 @@
 		2BA7FF2C261FCC0400FE0FE7 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF2B261FCC0400FE0FE7 /* ModelDataHandler.swift */; };
 		2BA7FF34261FCC2100FE0FE7 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */; };
 		7310A3C7265E2998009DAC1D /* BadgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310A3C6265E2998009DAC1D /* BadgeCell.swift */; };
+		7310A3CC26604197009DAC1D /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 7310A3CB26604197009DAC1D /* model_prototype.tflite */; };
+		7310A3CD26604197009DAC1D /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 7310A3CB26604197009DAC1D /* model_prototype.tflite */; };
+		7310A3CE26604197009DAC1D /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 7310A3CB26604197009DAC1D /* model_prototype.tflite */; };
+		7310A3D0266041A4009DAC1D /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7310A3CF266041A4009DAC1D /* labels.txt */; };
+		7310A3D1266041A4009DAC1D /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7310A3CF266041A4009DAC1D /* labels.txt */; };
+		7310A3D2266041A4009DAC1D /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7310A3CF266041A4009DAC1D /* labels.txt */; };
 		7349531A262FDD770075A8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA7260D5BB2003AB521 /* Assets.xcassets */; };
 		736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */; };
 		73CCB750264DB7070037F936 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCB74F264DB7070037F936 /* SettingsViewController.swift */; };
@@ -96,6 +102,8 @@
 		2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
 		3AF07442642DCE88E1946CE3 /* Pods-OptiCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle/Pods-OptiCycle.release.xcconfig"; sourceTree = "<group>"; };
 		7310A3C6265E2998009DAC1D /* BadgeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCell.swift; sourceTree = "<group>"; };
+		7310A3CB26604197009DAC1D /* model_prototype.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model_prototype.tflite; path = "../../../model_prototype 2/model_prototype.tflite"; sourceTree = "<group>"; };
+		7310A3CF266041A4009DAC1D /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = labels.txt; path = "../../../model_prototype 2/labels.txt"; sourceTree = "<group>"; };
 		736F0AFC2617C11000D04854 /* ProfileChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileChildViewController.swift; sourceTree = "<group>"; };
 		73CCB74F264DB7070037F936 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		73CCB751264E42F00037F936 /* ChangeDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +229,7 @@
 		2B98EC9D260D5BB2003AB521 /* OptiCycle */ = {
 			isa = PBXGroup;
 			children = (
+				7310A3CA26604183009DAC1D /* Model */,
 				2BA7FF2A261FCBED00FE0FE7 /* ModelHandlers */,
 				2BA7FF1C261FCB7C00FE0FE7 /* CameraFeed */,
 				2BA7FF13261FCA1B00FE0FE7 /* Views */,
@@ -280,6 +289,15 @@
 				2BA7FF33261FCC2100FE0FE7 /* CVPixelBufferExtension.swift */,
 			);
 			path = ModelHandlers;
+			sourceTree = "<group>";
+		};
+		7310A3CA26604183009DAC1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7310A3CB26604197009DAC1D /* model_prototype.tflite */,
+				7310A3CF266041A4009DAC1D /* labels.txt */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +410,8 @@
 			files = (
 				2B98ECAB260D5BB2003AB521 /* LaunchScreen.storyboard in Resources */,
 				7349531A262FDD770075A8B6 /* Assets.xcassets in Resources */,
+				7310A3D0266041A4009DAC1D /* labels.txt in Resources */,
+				7310A3CC26604197009DAC1D /* model_prototype.tflite in Resources */,
 				2B98ECA6260D5BB2003AB521 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +420,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7310A3CD26604197009DAC1D /* model_prototype.tflite in Resources */,
+				7310A3D1266041A4009DAC1D /* labels.txt in Resources */,
 				989694E226506A53007ECCA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +430,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7310A3CE26604197009DAC1D /* model_prototype.tflite in Resources */,
+				7310A3D2266041A4009DAC1D /* labels.txt in Resources */,
 				989694E626506A54007ECCA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -728,6 +752,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8A6K5894T;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = OptiCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -750,6 +775,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8A6K5894T;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = OptiCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
