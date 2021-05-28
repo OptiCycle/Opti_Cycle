@@ -112,14 +112,45 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidAppear(_ animated: Bool) {
         // Make postsCountLabel equal to amount of posts user has posted
         let user = PFUser.current() as! PFUser
-        let totalPosts = user["totalPosts"] as! CGFloat
-        let metals = user["metal"] as! CGFloat
-        let plastics = user["plastic"] as! CGFloat
-        let glass = user["glass"] as! CGFloat
-        let paper = user["paper"] as! CGFloat
+        query.whereKey("author", equalTo: PFUser.current()!)
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                // Log details of the failure
+                print(error.localizedDescription)
+            } else if let objects = objects {
+                // The find succeeded.
+                // Do something with the found objects
+                for object in objects {
+                    self.userBadgeCount = (object["badgeCount"] as! Int)
+                    self.gotBadge1 = (object["badge1"] as! Bool)
+                    self.gotBadge2 = (object["badge2"] as! Bool)
+                    self.gotBadge3 = (object["badge3"] as! Bool)
+                    self.gotBadge4 = (object["badge4"] as! Bool)
+                    self.gotBadge5 = (object["badge5"] as! Bool)
+                    self.gotBadge6 = (object["badge6"] as! Bool)
+                    self.gotBadge7 = (object["badge7"] as! Bool)
+                    self.gotBadge8 = (object["badge8"] as! Bool)
+                    self.gotBadge9 = (object["badge9"] as! Bool)
+                    self.gotBadge10 = (object["badge10"] as! Bool)
+                    self.gotBadge11 = (object["badge11"] as! Bool)
+                    self.gotBadge12 = (object["badge12"] as! Bool)
+                    self.collectionView.reloadData()
+                    self.animateProgressBars(currentUser: user, badgeCount: (object["badgeCount"] as! Int))
+                }
+            }
+        }
+    }
+    
+    func animateProgressBars(currentUser: PFUser, badgeCount: Int) {
+        let totalPosts = currentUser["totalPosts"] as! CGFloat
+        let metals = currentUser["metal"] as! CGFloat
+        let plastics = currentUser["plastic"] as! CGFloat
+        let glass = currentUser["glass"] as! CGFloat
+        let paper = currentUser["paper"] as! CGFloat
         
-        UIView.animate(withDuration: 1.0)
+        UIView.animate(withDuration: 0.25)
         {
+            self.badgesProgressBar.value = CGFloat(badgeCount)
             if totalPosts <= 500 {
                 self.milestoneProgressBar.value = totalPosts
             }
@@ -155,36 +186,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
                 self.glassProgressBar.value = 100
             }
         }
-        
-        query.whereKey("author", equalTo: PFUser.current()!)
-        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
-            if let error = error {
-                // Log details of the failure
-                print(error.localizedDescription)
-            } else if let objects = objects {
-                // The find succeeded.
-                // Do something with the found objects
-                for object in objects {
-                    self.userBadgeCount = (object["badgeCount"] as! Int)
-                    self.gotBadge1 = (object["badge1"] as! Bool)
-                    self.gotBadge2 = (object["badge2"] as! Bool)
-                    self.gotBadge3 = (object["badge3"] as! Bool)
-                    self.gotBadge4 = (object["badge4"] as! Bool)
-                    self.gotBadge5 = (object["badge5"] as! Bool)
-                    self.gotBadge6 = (object["badge6"] as! Bool)
-                    self.gotBadge7 = (object["badge7"] as! Bool)
-                    self.gotBadge8 = (object["badge8"] as! Bool)
-                    self.gotBadge9 = (object["badge9"] as! Bool)
-                    self.gotBadge10 = (object["badge10"] as! Bool)
-                    self.gotBadge11 = (object["badge11"] as! Bool)
-                    self.gotBadge12 = (object["badge12"] as! Bool)
-                    self.collectionView.reloadData()
-                }
-            }
-        }
-        
-        let badgeCount = self.userBadgeCount
-        UIView.animate(withDuration: 1.0){self.badgesProgressBar.value = CGFloat(badgeCount)}
     }
     
     // Editting Cell spacing and size

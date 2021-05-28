@@ -113,7 +113,11 @@ class InferenceViewController: UIViewController {
         post["item"] = item
         
         // Increment User's type of trash count
-        user.incrementKey(item, byAmount: 1)
+        var realItem = item
+        if item == "miscellaneous plastic" {
+            realItem = "plastic"
+        }
+        user.incrementKey(realItem, byAmount: 1)
         user.incrementKey("totalPosts", byAmount: 1)
         checkIfUserGotBadge(currentUser: PFUser.current()!)
         user.saveInBackground
