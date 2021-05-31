@@ -56,7 +56,7 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = sender as! UICollectionViewCell
         let indexPath = collectionView.indexPath(for: cell)!
         
-        let shopDetailsVC = segue.destination as! ShopDetailsViewController
+        let shopDetailsVC = segue.destination as! ShopDetailsController
         print("Cell index:")
         print(indexPath)
         shopDetailsVC.category = self.categories[indexPath[1]]
