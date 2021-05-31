@@ -14,6 +14,8 @@
 		2B42F5BD2665445A003B9DC2 /* ShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42F5BC2665445A003B9DC2 /* ShopCollectionViewCell.swift */; };
 		2B42F5BF26654903003B9DC2 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42F5BE26654903003B9DC2 /* ShopViewController.swift */; };
 		2B42F5C12665564E003B9DC2 /* ShopDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42F5C02665564E003B9DC2 /* ShopDetailsViewController.swift */; };
+		2B42F5C32665653D003B9DC2 /* ShopFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42F5C22665653D003B9DC2 /* ShopFilterViewController.swift */; };
+		2B42F5C526656F94003B9DC2 /* ShopDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42F5C426656F94003B9DC2 /* ShopDetailsCell.swift */; };
 		2B454BF42622331E0013AED0 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF32622331E0013AED0 /* ResultsViewController.swift */; };
 		2B454BF9262238D70013AED0 /* LocalStandardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BF8262238D70013AED0 /* LocalStandardsViewController.swift */; };
 		2B454BFE2622399C0013AED0 /* LocalStandardsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */; };
@@ -79,6 +81,8 @@
 		2B42F5BC2665445A003B9DC2 /* ShopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewCell.swift; sourceTree = "<group>"; };
 		2B42F5BE26654903003B9DC2 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		2B42F5C02665564E003B9DC2 /* ShopDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailsViewController.swift; sourceTree = "<group>"; };
+		2B42F5C22665653D003B9DC2 /* ShopFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFilterViewController.swift; sourceTree = "<group>"; };
+		2B42F5C426656F94003B9DC2 /* ShopDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailsCell.swift; sourceTree = "<group>"; };
 		2B454BF32622331E0013AED0 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2B454BF8262238D70013AED0 /* LocalStandardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStandardsViewController.swift; sourceTree = "<group>"; };
 		2B454BFD2622399C0013AED0 /* LocalStandardsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStandardsViewCell.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				9865F98D2652C65D00805F4F /* FindFriendsViewController.swift */,
 				2B42F5BE26654903003B9DC2 /* ShopViewController.swift */,
 				2B42F5C02665564E003B9DC2 /* ShopDetailsViewController.swift */,
+				2B42F5C22665653D003B9DC2 /* ShopFilterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				9865F9882652C55000805F4F /* FriendCell.swift */,
 				7310A3C6265E2998009DAC1D /* BadgeCell.swift */,
 				2B42F5BC2665445A003B9DC2 /* ShopCollectionViewCell.swift */,
+				2B42F5C426656F94003B9DC2 /* ShopDetailsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -575,7 +581,9 @@
 				2BA7FF34261FCC2100FE0FE7 /* CVPixelBufferExtension.swift in Sources */,
 				2B98ECA1260D5BB2003AB521 /* SceneDelegate.swift in Sources */,
 				2BA7FF18261FCA5A00FE0FE7 /* CurvedView.swift in Sources */,
+				2B42F5C526656F94003B9DC2 /* ShopDetailsCell.swift in Sources */,
 				736F0AFD2617C11000D04854 /* ProfileChildViewController.swift in Sources */,
+				2B42F5C32665653D003B9DC2 /* ShopFilterViewController.swift in Sources */,
 				9865F9892652C55000805F4F /* FriendCell.swift in Sources */,
 				73E7B092261D5B1D00203D60 /* ProfileViewController.swift in Sources */,
 				2B454BF9262238D70013AED0 /* LocalStandardsViewController.swift in Sources */,

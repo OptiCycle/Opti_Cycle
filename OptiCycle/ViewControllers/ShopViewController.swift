@@ -9,26 +9,8 @@ import UIKit
 
 class ShopViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    let categories = ["Men's", "Women's", "Bags", "Hats", "Accessories", "Toys"]
     
-    let shopItems = ["Tops": [
-                        ["label": "Classic Tee",
-                        "img url": "https://cdn.shopify.com/s/files/1/1174/9052/products/RS100_Carbon_2c36675e-81a7-4a1b-a487-0cbe73dac45f_large.jpg?v=1583353285",
-                        "url": "https://recoverbrands.com/collections/mens/products/recover-tee?variant=13008189554711"],
-                              
-                        ["label": "Pocket Tee",
-                         "img url":"https://cdn.shopify.com/s/files/1/1174/9052/products/RSPNavy_large.png?v=1585587281",
-                         "url": "https://recoverbrands.com/collections/mens/products/pocket-tee?variant=31805913432112"]
-                    ],
-                "Shorts": [],
-                "Pants": [],
-                "Athletic Wear": [],
-                "Shoes": [],
-                "Bags": [],
-                "Hats": [],
-                "Outer Wear": [],
-                "Accessories": [],
-                "Toys": []
-    ] as [String : Any]
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -48,15 +30,16 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shopItems.count
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopCollectionViewCell", for: indexPath) as! ShopCollectionViewCell
         
         // Configure the cell
-        cell.catLabel.text = Array(shopItems)[indexPath.row].key as! String
-        cell.imgPreview.image = UIImage(named: "plastics")
+        cell.catLabel.text = categories[indexPath.row] as! String
+        
+        cell.imgPreview.image = UIImage(named: categories[indexPath.row])
         
     
         return cell
@@ -74,6 +57,9 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let indexPath = collectionView.indexPath(for: cell)!
         
         let shopDetailsVC = segue.destination as! ShopDetailsViewController
+        print("Cell index:")
+        print(indexPath)
+        shopDetailsVC.category = self.categories[indexPath[1]]
         
         collectionView.deselectItem(at: indexPath, animated: true)
     }
