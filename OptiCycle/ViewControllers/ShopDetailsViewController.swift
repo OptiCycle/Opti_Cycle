@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Parse
 
 class ShopDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     
     let errorAddress = "https://www.globalsign.com/application/files/9516/0389/3750/What_Is_an_SSL_Common_Name_Mismatch_Error_-_Blog_Image.jpg"
     
@@ -73,8 +75,9 @@ class ShopDetailsViewController: UIViewController, UITableViewDelegate, UITableV
     ] as [String : Array<Dictionary<String, String>>]
     
     var category = String()
+//    var searchQuery = String()
     
-    var items = [String: Any]()
+    var items = [PFObject]()
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -84,28 +87,64 @@ class ShopDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
+//        switch category {
+//        case "Men's":
+//            searchQuery = "MenShopItems"
+//        case "Women's":
+//            searchQuery = "WomenShopItems"
+//        case "Bags":
+//            searchQuery = "BagsShopItems"
+//        case "Hats":
+//            searchQuery = "HatsShopItems"
+//        case "Accessories":
+//            searchQuery = "AccessoriesShopItems"
+//        case "Toys":
+//            searchQuery = "ToysShopItems"
+//        default:
+//            break
+//        }
+        //add rest of search queries
         
-
-        // Do any additional setup after loading the view.
+        refreshData()
+        
+        
+        
+    }
+    func refreshData(){
+        let query = PFQuery(className:"MenShopItems")
+        query.limit = 50
+        query.whereKey("Class", equalTo: category)
+        //add filter conditional statement for additional query
+            
+        
+        query.findObjectsInBackground{ (list, error) in
+            if list != nil{
+                self.items = list!
+                self.tableView.reloadData()
+            }
+        }
     }
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShopDetailsCell") as! ShopDetailsCell
-        let item = shopMenItems["Tops"]![indexPath.row]
+        
+        let item = items[indexPath.row]
         
         print("Item array:")
         print(item)
         
-        cell.nameLabel.text = item["label"]!
-        cell.priceLabel.text = item["price"]!
-        cell.url = item["url"]!
+        cell.nameLabel.text = item["Name"] as! String
+        cell.priceLabel.text = item["Price"] as! String
+        cell.url = item["URL"] as! String
 
-
-        let img_url = URL(string: item["img url"] ?? errorAddress) as! URL
+        let my_imgUrl = item["Image_URL"] as! String
+        let img_url = URL(string: my_imgUrl ?? errorAddress) as! URL
         if let data = try? Data(contentsOf : img_url) {
             cell.itemImage.image = UIImage(data : data as! Data)
         }
