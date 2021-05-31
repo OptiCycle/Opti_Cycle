@@ -82,7 +82,7 @@ class ProfileChildViewController: UIViewController, UIImagePickerControllerDeleg
                 
                 currentUser?.saveInBackground{ (success, error) in
                     if success {
-                        self.dismiss(animated: true, completion: nil)
+//                        self.dismiss(animated: true, completion: nil)
                         print("Saved photo taken!")
                     } else {
                         print("error!")
@@ -112,7 +112,7 @@ class ProfileChildViewController: UIViewController, UIImagePickerControllerDeleg
                 
                 currentUser?.saveInBackground{ (success, error) in
                     if success {
-                        self.dismiss(animated: true, completion: nil)
+//                        self.dismiss(animated: true, completion: nil)
                         print("Current Photo Removed!")
                     } else {
                         print("error!")
@@ -147,7 +147,7 @@ class ProfileChildViewController: UIViewController, UIImagePickerControllerDeleg
             
             currentUser?.saveInBackground{ (success, error) in
                 if success {
-                    self.dismiss(animated: true, completion: nil)
+//                    self.dismiss(animated: true, completion: nil)
                     print("Saved photo chosen!")
                 } else {
                     print("error!")
