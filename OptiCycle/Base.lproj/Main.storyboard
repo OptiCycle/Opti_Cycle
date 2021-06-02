@@ -903,10 +903,10 @@
             </objects>
             <point key="canvasLocation" x="292.75362318840581" y="-698.4375"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Animated Tab Bar Controller-->
         <scene sceneID="3hQ-bb-tQB">
             <objects>
-                <tabBarController storyboardIdentifier="TabNavigationController" modalPresentationStyle="fullScreen" id="Fns-79-lYC" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabNavigationController" modalPresentationStyle="fullScreen" id="Fns-79-lYC" customClass="AnimatedTabBarController" customModule="OptiCycle" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Tdz-bU-s3Q"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Yew-Ws-QfS">

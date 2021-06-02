@@ -50,6 +50,7 @@
 		989694E626506A54007ECCA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B98ECA4260D5BB2003AB521 /* Main.storyboard */; };
 		98A9401B2655B12300C99B22 /* OtherUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9401A2655B12300C99B22 /* OtherUserProfileViewController.swift */; };
 		98FD0C502667C5A0003EFBCD /* UserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD0C4F2667C5A0003EFBCD /* UserButton.swift */; };
+		98FD0C682667EB90003EFBCD /* AnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD0C672667EB90003EFBCD /* AnimatedTabBarController.swift */; };
 		E7041557FB3551E23465DB55 /* Pods_OptiCycleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,7 @@
 		9865F98D2652C65D00805F4F /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
 		98A9401A2655B12300C99B22 /* OtherUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserProfileViewController.swift; sourceTree = "<group>"; };
 		98FD0C4F2667C5A0003EFBCD /* UserButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserButton.swift; sourceTree = "<group>"; };
+		98FD0C672667EB90003EFBCD /* AnimatedTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTabBarController.swift; sourceTree = "<group>"; };
 		B6BDF389C9C6232B966AB222 /* Pods-OptiCycle-OptiCycleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; path = "Target Support Files/Pods-OptiCycle-OptiCycleUITests/Pods-OptiCycle-OptiCycleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3472E7D3BC571C2120FC211 /* Pods_OptiCycleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2021AD562B407724DAC738B /* Pods_OptiCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptiCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +257,7 @@
 				2B98ECAC260D5BB2003AB521 /* Info.plist */,
 				98A9401A2655B12300C99B22 /* OtherUserProfileViewController.swift */,
 				98FD0C4F2667C5A0003EFBCD /* UserButton.swift */,
+				98FD0C672667EB90003EFBCD /* AnimatedTabBarController.swift */,
 			);
 			path = OptiCycle;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				9865F98E2652C65D00805F4F /* FindFriendsViewController.swift in Sources */,
 				73CCB750264DB7070037F936 /* SettingsViewController.swift in Sources */,
 				2BA7FF26261FCBA600FE0FE7 /* CameraFeedManager.swift in Sources */,
+				98FD0C682667EB90003EFBCD /* AnimatedTabBarController.swift in Sources */,
 				2B98ECA3260D5BB2003AB521 /* ViewController.swift in Sources */,
 				2B1B8F922616980B00C69AC4 /* FeedViewController.swift in Sources */,
 				2BA7FF0A261FC8D700FE0FE7 /* PreviewViewController.swift in Sources */,
