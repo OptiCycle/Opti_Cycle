@@ -9,7 +9,7 @@ import UIKit
 
 class FriendCell: UITableViewCell {
     
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button: UserButton!
     
     @IBOutlet weak var background: UIView!
     

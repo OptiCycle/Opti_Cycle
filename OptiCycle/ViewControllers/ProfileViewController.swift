@@ -19,8 +19,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var milestoneProgressBar: MBCircularProgressBarView!
     
     
-   
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     let query = PFQuery(className:"Badges")
@@ -42,9 +40,12 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Entering profile")
+        
         //print(" HEYYYY THIS IS THE TASK:  \(badge[0]["badgeImage"])")
 
         // Do any additional setup after loading the view.
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         

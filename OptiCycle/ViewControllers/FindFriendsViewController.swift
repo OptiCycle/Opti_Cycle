@@ -20,23 +20,50 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
     var filteredUsers = [PFObject]()
     var buttons = [UIButton]()
     
+    var userClicked: PFUser!
+    
+    
     @IBAction func goToProfile(_ sender: Any) {
         
+        print((sender as! UserButton).displayUser!)
         
-        var correctUser = users[0]
+        userClicked = (sender as! UserButton).displayUser!
+//        let profileVC = OtherUserProfileViewController()
         
-        // find correct user
-        for i in 0..<buttons.count {
-            if buttons[i] == sender as! NSObject {
-                correctUser = users[i]
-            }
-        }
+        performSegue(withIdentifier: "showProfile", sender: self)
         
-        let username = correctUser["username"] as! String
-        print("\n\(username) was clicked!")
         
-        print("Created at \(correctUser.createdAt as! Date)")
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationNavigationController = segue.destination as! UINavigationController
+        let targetController = destinationNavigationController.topViewController as! OtherUserProfileViewController
+        
+        print("\n\n")
+        print(targetController)
+        
+        targetController.displayedUser = userClicked
+    }
+    
+    
+//    @IBAction func goToProfile(_ sender: Any) {
+//
+//
+//        var correctUser = users[0]
+//
+//        // find correct user
+//        for i in 0..<buttons.count {
+//            if buttons[i] == sender as! NSObject {
+//                correctUser = users[i]
+//            }
+//        }
+//
+//        let username = correctUser["username"] as! String
+//        print("\n\(username) was clicked!")
+//
+//        print("Created at \(correctUser.createdAt as! Date)")
+//    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -194,7 +221,7 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         
         if currentUser["username"] as! String == username {
             
-            print("\n\nENTERED")
+//            print("\n\nENTERED")
             cell.usernameLabel.text = username + " (You)"
 //            cell.usernameLabel.font = UIFont(name: "System-Heavy", size: 19)
         }
@@ -204,19 +231,20 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         
         print(username)
 
-
-        
         cell.button.setTitle(username, for: .normal)
         cell.button.setTitleColor(UIColor.clear, for: .normal)
+        cell.button.displayUser = user as? PFUser
+                
         
-        //Dont add to array if already in array
-        if buttons.contains(cell.button) {
-//            print("Already added in array")
-        }
         
-        else {
-            buttons.append(cell.button)
-        }
+//        //Dont add to array if already in array
+//        if buttons.contains(cell.button) {
+////            print("Already added in array")
+//        }
+//
+//        else {
+//            buttons.append(cell.button)
+//        }
 
         //set the number of posts made
         let placeHolder = "Objects Recycled: "
