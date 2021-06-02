@@ -10,6 +10,7 @@ import Parse
 import MBCircularProgressBar
 
 class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
 
     @IBOutlet weak var plasticsProgressBar: MBCircularProgressBarView!
     @IBOutlet weak var badgesProgressBar: MBCircularProgressBarView!

@@ -16,6 +16,10 @@ import MBCircularProgressBar
 
 class OtherUserProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var backBarButton: UIBarButtonItem!
     var displayedUser: PFUser!
     
     
@@ -53,13 +57,41 @@ class OtherUserProfileViewController: UIViewController, UICollectionViewDelegate
     var gotBadge11: Bool = false
     var gotBadge12: Bool = false
     
+    @IBAction func onBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "Back Button", style: .plain, target: nil, action: nil)
+        self.usernameLabel.text = self.displayedUser["username"] as! String
         
-        self.title = displayedUser["username"] as! String
+        if let imageFile: PFFileObject = displayedUser["profileImage"] as? PFFileObject {
+            imageFile.getDataInBackground(block: { (data, error) in
+                if error == nil {
+                    DispatchQueue.main.async {
+
+                        let image = UIImage(data: data!)
+                        
+                        self.profilePicture.image = image
+                        
+                        self.profilePicture.layer.borderWidth = 2
+                        self.profilePicture.layer.masksToBounds = false
+                        self.profilePicture.layer.borderColor = UIColor.black.cgColor
+                        self.profilePicture.layer.cornerRadius = self.profilePicture.frame.height/2
+                        self.profilePicture.clipsToBounds = true
+
+                    }
+                }
+            })
+        }
+
+        
+        
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back")
+        
+        self.title = "\(displayedUser["username"] as! String)'s Profile"
         
         print("Entering profile\n\n")
         
