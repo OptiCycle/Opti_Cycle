@@ -46,28 +46,7 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         targetController.displayedUser = userClicked
     }
     
-    
-//    @IBAction func goToProfile(_ sender: Any) {
-//
-//
-//        var correctUser = users[0]
-//
-//        // find correct user
-//        for i in 0..<buttons.count {
-//            if buttons[i] == sender as! NSObject {
-//                correctUser = users[i]
-//            }
-//        }
-//
-//        let username = correctUser["username"] as! String
-//        print("\n\(username) was clicked!")
-//
-//        print("Created at \(correctUser.createdAt as! Date)")
-//    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    func reloadData(){
         let query = PFQuery(className:"_User")
         
 //        query.includeKey("objectId")
@@ -104,6 +83,31 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    
+//    @IBAction func goToProfile(_ sender: Any) {
+//
+//
+//        var correctUser = users[0]
+//
+//        // find correct user
+//        for i in 0..<buttons.count {
+//            if buttons[i] == sender as! NSObject {
+//                correctUser = users[i]
+//            }
+//        }
+//
+//        let username = correctUser["username"] as! String
+//        print("\n\(username) was clicked!")
+//
+//        print("Created at \(correctUser.createdAt as! Date)")
+//    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -114,6 +118,7 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.keyboardDismissMode = UIScrollView.KeyboardDismissMode.interactive
         
         noUsersLabel.isHidden = true
+        reloadData()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange text: String) {
