@@ -113,7 +113,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let name = user.username as! String
         let item = post["item"] as! String
         let conf = post["confidence"] as! String
-        cell.postLabel.text = name + " recycled " + item + " with a confidence of " + conf
+        
+        
+        let text = NSMutableAttributedString()
+        text.append(NSAttributedString(string: name, attributes: [NSAttributedString.Key.foregroundColor: UIColor.green]));
+        text.append(NSAttributedString(string: " recycled " + item + " with a confidence of " + conf, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]))
+        
+        cell.postLabel.attributedText = text
+        
+        
+        
+        
+//        cell.postLabel.text = name + " recycled " + item + " with a confidence of " + conf
         let imageLabel = post["image_label"] as! String
         cell.postImage.image = UIImage(named: imageLabel)
 
