@@ -7,10 +7,13 @@
 
 import UIKit
 
-class LocalStandardsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LocalStandardsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var localtableView: UITableView!
-    var library = [[
+    var location = "State College"
+    let stateCollege = [[
         "type": "Batteries and Bulbs",
         "preview": "Some batteries and bulbs can be recycled. Check out our Batteries & Bulbs Fact Sheet for more information.",
         "image": "batteries-bulbs-poster",
@@ -38,12 +41,39 @@ class LocalStandardsViewController: UIViewController, UITableViewDataSource, UIT
         
     ]
     
+    let boulder = [[
+                    "type": "Recycling Guidelines",
+                    "preview": "Please follow the intructions on the poster when recycling.",
+                    "image": "https://www.ecocycle.org/images/guidelines/recycle-thumb.PNG",
+                    "url": "https://www.ecocycle.org/files/pdfs/guidelines/ecocycle_recycling-guidelines_web.pdf"],
+                   ["type": "Recycling Contaminants: Dirty Dozen",
+                    "preview": "Avoid disposing of these items in recycling bins.",
+                    "image": "https://www.ecocycle.org/images/guidelines/dirty-dozen-guide-thumb.png",
+                    "url": "https://www.ecocycle.org/files/pdfs/guidelines/ecocycle_recycling-contaminants_web.pdf"],
+                   ["type": "Curbside Composting",
+                    "preview": "Only compost the types of items listed in the poster",
+                    "image": "https://www.ecocycle.org/images/guidelines/compost-guide-thumb.png",
+                    "url": "https://www.ecocycle.org/files/pdfs/guidelines/ecocycle_compost-guidelines_web.pdf"],
+                    ["type": "Plastic Bags and Bubble Wrap",
+                     "preview": "Large plastics such as Big Wheels® and plastic play structures, plastic lawn furniture, plastic watering cans, laundry baskets, clean plastic buckets (no residue), crates, rigid backyard kiddie pools and plastic trash containers.",
+                     "image": "https://www.ecocycle.org/images/CHaRM/ecocycle-foam-packing-sheet_500.jpg",
+                     "url": "https://www.ecocycle.org/charm#plasticbagsbubblewrap"],
+                    ["type": "Electronics",
+                     "preview": "CRT (not flatscreen) TVs, rear-projection TVs, Monitors: $0.69/lb NOTE:  Broken CRT glass is classified by the EPA as hazardous waste, and requires extra handling and documentation. Price for broken CRT glass is $1.00/lb.",
+                     "image": "https://www.ecocycle.org/images/CHaRM/printer-cartridges_web.jpg",
+                     "url": "https://www.ecocycle.org/charm#electronics"],
+                    ]
+    var library = [[String: String]]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         localtableView.dataSource = self
         localtableView.delegate = self
+        searchBar.delegate = self
+        library = stateCollege
+        
         
         localtableView.keyboardDismissMode = UIScrollView.KeyboardDismissMode.interactive
 
@@ -61,7 +91,17 @@ class LocalStandardsViewController: UIViewController, UITableViewDataSource, UIT
         
         cell.typeLabel.text = info["type"] as! String
         cell.previewLabel.text = info["preview"] as! String
-        cell.itemImage.image = UIImage(named: info["image"] as! String)
+        
+        if location == "State College"{
+            cell.itemImage.image = UIImage(named: info["image"] as! String)
+        }
+        else if location == "Boulder"{
+            let my_imgUrl = info["image"] as! String
+            let img_url = URL(string: my_imgUrl) as! URL
+            if let data = try? Data(contentsOf : img_url) {
+                cell.itemImage.image = UIImage(data : data as! Data)
+            }
+        }
         
         return cell
     }
@@ -73,6 +113,27 @@ class LocalStandardsViewController: UIViewController, UITableViewDataSource, UIT
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange text: String) {
+        if text == "Boulder"{
+            library = boulder
+            location = "Boulder"
+        }
+        else if text == "State College"{
+            library = stateCollege
+            location = "State College"
+        }
+        localtableView.reloadData()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
