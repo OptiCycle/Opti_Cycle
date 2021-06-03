@@ -1769,7 +1769,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzC-lx-X3N" customClass="UserButton" customModule="OptiCycle">
-                                                            <rect key="frame" x="-151" y="-135" width="414" height="168"/>
+                                                            <rect key="frame" x="-151" y="-35" width="417" height="168"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <connections>
