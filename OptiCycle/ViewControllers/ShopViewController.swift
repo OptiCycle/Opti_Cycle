@@ -51,6 +51,7 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let cell = sender as! UICollectionViewCell

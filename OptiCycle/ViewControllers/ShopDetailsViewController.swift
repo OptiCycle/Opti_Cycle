@@ -101,7 +101,8 @@ class ShopDetailsViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-
+    
+    
     /*
     // MARK: - Navigation
 

@@ -77,9 +77,6 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
         
         let item = items[indexPath.row]
         
-        print("Item array:")
-        print(item)
-        
         cell.itemLabel.text = item["Name"] as! String
         cell.priceLabel.text = item["Price"] as! String
         cell.url = item["URL"] as! String
@@ -102,7 +99,11 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.deselectItem(at: indexPath, animated: true)
     }
     
-
+    @IBAction func backButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
