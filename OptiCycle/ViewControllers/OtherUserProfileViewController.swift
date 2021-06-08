@@ -116,7 +116,7 @@ class OtherUserProfileViewController: UIViewController, UICollectionViewDelegate
     override func viewDidAppear(_ animated: Bool) {
         // Make postsCountLabel equal to amount of posts user has posted
         let user = displayedUser!
-        query.whereKey("author", equalTo: PFUser.current()!)
+        query.whereKey("author", equalTo: displayedUser!)
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if let error = error {
                 // Log details of the failure
@@ -264,6 +264,7 @@ class OtherUserProfileViewController: UIViewController, UICollectionViewDelegate
         
         // Set up Cell's image
         if currentBadge[indexPath.row] {
+            print("in here")
             cell.badgeImageView.image = (badges[indexPath.row]["badgeImage"] as! UIImage)
         }
         else {
