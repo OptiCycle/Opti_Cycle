@@ -40,11 +40,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("Entering profile")
-        
-        //print(" HEYYYY THIS IS THE TASK:  \(badge[0]["badgeImage"])")
-
         // Do any additional setup after loading the view.
         
         collectionView.delegate = self
@@ -218,10 +213,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Badge", for: indexPath) as! BadgeCell
         
         let currentBadge = [self.gotBadge1, self.gotBadge2, self.gotBadge3, self.gotBadge4, self.gotBadge5, self.gotBadge6, self.gotBadge7, self.gotBadge8, self.gotBadge9, self.gotBadge10, self.gotBadge11, self.gotBadge12]
-        
-        if indexPath.row == 10{
-            print("Badge ll: ........... \(currentBadge[10])")
-        }
         
         // Set up Cell's image
         if currentBadge[indexPath.row] {

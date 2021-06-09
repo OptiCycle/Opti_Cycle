@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class ShopDetailsController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ShopDetailsController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let errorAddress = "https://www.globalsign.com/application/files/9516/0389/3750/What_Is_an_SSL_Common_Name_Mismatch_Error_-_Blog_Image.jpg"
     
@@ -19,6 +19,8 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private let spacing: CGFloat = 16.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,11 +28,17 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.dataSource = self
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.minimumLineSpacing = 5
-        layout.minimumInteritemSpacing = 5
-
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing) / 2
-        layout.itemSize = CGSize(width: width, height: width * 2)
+        layout.sectionInset = UIEdgeInsets(top: 20, left: spacing, bottom: 20, right: spacing)
+        layout.minimumLineSpacing = 20
+        layout.minimumInteritemSpacing = spacing
+        self.collectionView?.collectionViewLayout = layout
+        
+//        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+//        layout.minimumLineSpacing = 5
+//        layout.minimumInteritemSpacing = 5
+//
+//        let width = (view.frame.size.width - layout.minimumInteritemSpacing) / 2
+//        layout.itemSize = CGSize(width: width, height: width * 2)
 
         //        switch category {
         //        case "Men's":
@@ -68,6 +76,24 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
         }
     }
     
+    // Equally Sets space between cells
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberOfItemsPerRow:CGFloat = 2
+        let spacingBetweenCells:CGFloat = 16
+        
+        let totalSpacing = (2 * self.spacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells) //Amount of total spacing in a row
+        
+        if let collection = self.collectionView{
+            let width = (collection.bounds.width - totalSpacing)/numberOfItemsPerRow
+            return CGSize(width: width, height: 400)
+        }
+        else
+        {
+            return CGSize(width: 0, height: 0)
+        }
+    }
+    // End of equally setting spaces between cells
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -77,6 +103,7 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
         
         let item = items[indexPath.row]
         
+        // Instantiate Cell Elements
         cell.itemLabel.text = item["Name"] as! String
         cell.priceLabel.text = item["Price"] as! String
         cell.url = item["URL"] as! String
@@ -87,6 +114,33 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
         if let data = try? Data(contentsOf : img_url) {
             cell.itemImage.image = UIImage(data : data as! Data)
         }
+        
+        // Cell's Image Rounding
+        cell.itemImage.backgroundColor = UIColor.darkGray
+        cell.itemImage.layer.borderWidth = 2
+        cell.itemImage.layer.masksToBounds = false
+        cell.itemImage.layer.borderColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
+        cell.itemImage.layer.cornerRadius = 10//cell.imgPreview.frame.height/2
+        cell.itemImage.clipsToBounds = true
+        
+        // cell rounded section
+        cell.layer.cornerRadius = 15.0
+        cell.layer.borderWidth = 5.0
+        cell.layer.borderColor = UIColor.clear.cgColor
+        cell.layer.masksToBounds = true
+        
+        // cell shadow section
+        cell.contentView.layer.cornerRadius = 15.0
+        cell.contentView.layer.borderWidth = 5.0
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.contentView.layer.masksToBounds = true
+        cell.layer.shadowColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0.0)
+        cell.layer.shadowRadius = 7.0
+        cell.layer.shadowOpacity = 0.8
+        cell.layer.cornerRadius = 15.0
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
         return cell
     }
@@ -102,16 +156,5 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
     @IBAction func backButton(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
