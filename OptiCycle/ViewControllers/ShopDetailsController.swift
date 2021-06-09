@@ -27,6 +27,25 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        if categories[selectedCategorie] == "Men's"{
+            self.title = "Men's"
+        }
+        else if categories[selectedCategorie] == "Women's"{
+            self.title = "Women's"
+        }
+        else if categories[selectedCategorie] == "Bags"{
+            self.title = "Bags"
+        }
+        else if categories[selectedCategorie] == "Hats"{
+            self.title = "Hats"
+        }
+        else if categories[selectedCategorie] == "Accessories"{
+            self.title = "Accessories"
+        }
+        else if categories[selectedCategorie] == "Toys"{
+            self.title = "Toys"
+        }
+        
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 20, left: spacing, bottom: 20, right: spacing)
         layout.minimumLineSpacing = 20

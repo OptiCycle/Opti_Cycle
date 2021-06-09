@@ -7,9 +7,12 @@
 
 import UIKit
 
+var selectedCategorie = 0
+var categories = ["Men's", "Women's", "Bags", "Hats", "Accessories", "Toys"]
+
 class ShopViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    let categories = ["Men's", "Women's", "Bags", "Hats", "Accessories", "Toys"]
+    //let categories = ["Men's", "Women's", "Bags", "Hats", "Accessories", "Toys"]
     
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -98,6 +101,8 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCategorie = indexPath.row
+        
         performSegue(withIdentifier: "showDetails", sender: collectionView.cellForItem(at:indexPath))
     }
     
@@ -112,7 +117,7 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let shopDetailsVC = segue.destination as! ShopDetailsController
         print("Cell index:")
         print(indexPath)
-        shopDetailsVC.category = self.categories[indexPath[1]]
+        shopDetailsVC.category = categories[indexPath[1]]
         
         collectionView.deselectItem(at: indexPath, animated: true)
     }
