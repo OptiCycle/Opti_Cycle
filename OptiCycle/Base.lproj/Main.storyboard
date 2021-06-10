@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OOv-cj-6ey">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LNR-Hi-1jG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -602,6 +602,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gG-cZ-WNt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1790" y="1816"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bd5-dQ-e6W">
+            <objects>
+                <viewController id="LNR-Hi-1jG" customClass="ViewController" customModule="OptiCycle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gh1-JX-NhO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recycle" translatesAutoresizingMaskIntoConstraints="NO" id="JGb-fK-B83">
+                                <rect key="frame" x="137" y="378" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JGb-fK-B83" secondAttribute="height" multiplier="1:1" id="35P-8z-DyE"/>
+                                    <constraint firstAttribute="width" constant="140" id="V7i-2A-dc3"/>
+                                    <constraint firstAttribute="height" constant="140" id="uA3-Ng-HPv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wol-9E-qvW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JGb-fK-B83" firstAttribute="centerY" secondItem="gh1-JX-NhO" secondAttribute="centerY" id="4hq-iW-ads"/>
+                            <constraint firstItem="JGb-fK-B83" firstAttribute="centerX" secondItem="gh1-JX-NhO" secondAttribute="centerX" id="x4s-Do-bes"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="JGb-fK-B83" id="aNC-kl-qKE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFC-Mf-cli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2484.057971014493" y="-698.4375"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="1G3-kg-QyM">

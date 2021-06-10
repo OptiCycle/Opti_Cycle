@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,42 +20,17 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="1As-jo-Sia" secondAttribute="height" multiplier="32:9" constant="-357.77777777777777" id="rib-9r-8bO"/>
+                                    <constraint firstAttribute="height" constant="140" id="QZH-kq-eL5"/>
+                                    <constraint firstAttribute="width" constant="140" id="Vvv-el-9IM"/>
+                                    <constraint firstAttribute="width" secondItem="1As-jo-Sia" secondAttribute="height" multiplier="1:1" id="prN-bS-xSY"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPTICYCLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qE6-6b-SpW">
-                                <rect key="frame" x="20" y="151" width="374" height="70"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="qE6-6b-SpW" secondAttribute="height" multiplier="187:35" id="SST-zA-2Xc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="60"/>
-                                <color key="textColor" red="0.62745100259999997" green="0.89803922179999995" blue="0.64705884459999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All YOU NEED TO GO GREEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yng-RN-sNN">
-                                <rect key="frame" x="79" y="221" width="256" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="yng-RN-sNN" secondAttribute="height" multiplier="32:3" id="P7G-if-wDk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.62745100259999997" green="0.89803922179999995" blue="0.64705884459999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qE6-6b-SpW" secondAttribute="trailing" constant="20" id="2L0-7S-sex"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yng-RN-sNN" secondAttribute="trailing" constant="79" id="3AL-ED-cap"/>
-                            <constraint firstItem="1As-jo-Sia" firstAttribute="top" secondItem="yng-RN-sNN" secondAttribute="bottom" constant="133" id="3MH-NQ-n7o"/>
-                            <constraint firstItem="1As-jo-Sia" firstAttribute="top" secondItem="qE6-6b-SpW" secondAttribute="bottom" constant="157" id="3VI-kW-rXW"/>
-                            <constraint firstItem="qE6-6b-SpW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5oD-eG-9fy"/>
-                            <constraint firstItem="yng-RN-sNN" firstAttribute="top" secondItem="qE6-6b-SpW" secondAttribute="bottom" id="6FV-wr-L4p"/>
-                            <constraint firstItem="yng-RN-sNN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="59" id="BP4-ZU-ZxE"/>
-                            <constraint firstItem="1As-jo-Sia" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BvD-Ff-Qn8"/>
-                            <constraint firstItem="1As-jo-Sia" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="DH2-EZ-fnh"/>
-                            <constraint firstItem="qE6-6b-SpW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="107" id="ZyG-uP-IkG"/>
+                            <constraint firstItem="1As-jo-Sia" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="88f-TA-Ckc"/>
+                            <constraint firstItem="1As-jo-Sia" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="PMB-UV-Hag"/>
                         </constraints>
                     </view>
                 </viewController>
