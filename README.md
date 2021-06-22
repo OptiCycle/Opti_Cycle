@@ -13,11 +13,10 @@
  - [x] User can view posts
  - [x] User can create a recycle post
  - [x] User can view local standards
- - [ ] User can search local standards by location
+ - [x] User can search local standards by location
  - [x] User can view profile
  - [x] User can view recycling progress
- - [ ] User can add friends
- - [ ] User can view shop
+ - [x] User can view shop
  
  ## Video Walkthrough
  ### Part 1
