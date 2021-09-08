@@ -135,10 +135,10 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
         // Cell's Image Rounding
-        cell.itemImage.backgroundColor = UIColor.darkGray
-        cell.itemImage.layer.borderWidth = 2
+        cell.itemImage.backgroundColor = UIColor.systemGray4
+//        cell.itemImage.layer.borderWidth = 2
         cell.itemImage.layer.masksToBounds = false
-        cell.itemImage.layer.borderColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
+//        cell.itemImage.layer.borderColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
         cell.itemImage.layer.cornerRadius = 10//cell.imgPreview.frame.height/2
         cell.itemImage.clipsToBounds = true
         
@@ -153,13 +153,14 @@ class ShopDetailsController: UIViewController, UICollectionViewDelegate, UIColle
         cell.contentView.layer.borderWidth = 5.0
         cell.contentView.layer.borderColor = UIColor.clear.cgColor
         cell.contentView.layer.masksToBounds = true
-        cell.layer.shadowColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
+        cell.layer.shadowColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0).cgColor
         cell.layer.shadowOffset = CGSize(width: 0, height: 0.0)
-        cell.layer.shadowRadius = 7.0
+        cell.layer.shadowRadius = 3.0
         cell.layer.shadowOpacity = 0.8
         cell.layer.cornerRadius = 15.0
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+//        cell.layer.backgroundColor = UIColor.systemGray2.cgColor
         
         return cell
     }

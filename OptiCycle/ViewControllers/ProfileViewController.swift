@@ -9,6 +9,20 @@ import UIKit
 import Parse
 import MBCircularProgressBar
 
+extension UIImage {
+    var noir: UIImage? {
+        let context = CIContext(options: nil)
+        guard let currentFilter = CIFilter(name: "CIPhotoEffectNoir") else { return nil }
+        currentFilter.setValue(CIImage(image: self), forKey: kCIInputImageKey)
+        if let output = currentFilter.outputImage,
+            let cgImage = context.createCGImage(output, from: output.extent) {
+            return UIImage(cgImage: cgImage, scale: scale, orientation: imageOrientation)
+        }
+        return nil
+    }
+}
+
+
 class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
 
@@ -217,19 +231,22 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Set up Cell's image
         if currentBadge[indexPath.row] {
             cell.badgeImageView.image = (badges[indexPath.row]["badgeImage"] as! UIImage)
+            cell.badgeImageView.layer.borderColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
+            cell.badgeLabel.textColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0)
         }
         else {
-            cell.badgeImageView.image = UIImage(named: "lockedBadge")
+            cell.badgeImageView.image = UIImage(named: "lockedBadge")?.noir
+            cell.badgeLabel.textColor = .lightGray
         }
         cell.badgeImageView.backgroundColor = UIColor.darkGray
         cell.badgeImageView.layer.borderWidth = 2
         cell.badgeImageView.layer.masksToBounds = false
-        cell.badgeImageView.layer.borderColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
         cell.badgeImageView.layer.cornerRadius = cell.badgeImageView.frame.height/2
         cell.badgeImageView.clipsToBounds = true
         
         // Set up Cell's label
         cell.badgeLabel.text = (badges[indexPath.row]["task"] as! String)
+        
         
         // cell rounded section
         cell.layer.cornerRadius = 15.0
@@ -254,6 +271,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         return cell
     }
-
+    
+    
     @IBAction func UnwindSettingsViewController(unwindSegue: UIStoryboardSegue){}
 }

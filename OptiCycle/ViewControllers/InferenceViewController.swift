@@ -24,30 +24,30 @@ class InferenceViewController: UIViewController {
   // MARK: Sections and Information to display
   private enum InferenceSections: Int, CaseIterable {
     case Results
-    case InferenceInfo
+//    case InferenceInfo
   }
 
-  private enum InferenceInfo: Int, CaseIterable {
-    case Resolution
-    case Crop
-    case InferenceTime
-
-    func displayString() -> String {
-
-      var toReturn = ""
-
-      switch self {
-      case .Resolution:
-        toReturn = "Resolution"
-      case .Crop:
-        toReturn = "Crop"
-      case .InferenceTime:
-        toReturn = "Inference Time"
-
-      }
-      return toReturn
-    }
-  }
+//  private enum InferenceInfo: Int, CaseIterable {
+//    case Resolution
+//    case Crop
+//    case InferenceTime
+//
+//    func displayString() -> String {
+//
+//      var toReturn = ""
+//
+//      switch self {
+//      case .Resolution:
+//        toReturn = "Resolution"
+//      case .Crop:
+//        toReturn = "Crop"
+//      case .InferenceTime:
+//        toReturn = "Inference Time"
+//
+//      }
+//      return toReturn
+//    }
+//  }
 
   // MARK: Storyboard Outlets
   @IBOutlet weak var tableView: UITableView!
@@ -59,8 +59,8 @@ class InferenceViewController: UIViewController {
   private let minThreadCount = 1
   private let bottomSheetButtonDisplayHeight: CGFloat = 44.0
   private let lightTextInfoColor = UIColor(displayP3Red: 117.0/255.0, green: 117.0/255.0, blue: 117.0/255.0, alpha: 1.0)
-  private let infoFont = UIFont.systemFont(ofSize: 14.0, weight: .regular)
-  private let highlightedFont = UIFont.systemFont(ofSize: 14.0, weight: .medium)
+  private let infoFont = UIFont.systemFont(ofSize: 28.0, weight: .regular)
+  private let highlightedFont = UIFont.systemFont(ofSize: 28.0, weight: .heavy)
 
   // MARK: Instance Variables
   var inferenceResult: Result? = nil
@@ -89,6 +89,7 @@ class InferenceViewController: UIViewController {
     if #available(iOS 11, *) {
         infoTextColor = lightTextInfoColor
     }
+    recycleButton.layer.cornerRadius = 10
     
   }
 
@@ -96,6 +97,8 @@ class InferenceViewController: UIViewController {
   /**
    Delegate the change of number of threads to View Controller and change the stepper display.
    */
+    
+    @IBOutlet weak var recycleButton: UIButton!
     
     @IBAction func onRecycleButton(_ sender: Any) {
         let user = PFUser.current() as! PFUser
@@ -119,6 +122,11 @@ class InferenceViewController: UIViewController {
         }
         user.incrementKey(realItem, byAmount: 1)
         user.incrementKey("totalPosts", byAmount: 1)
+        let numToday = user["ItemsToday"] as! Int
+        if numToday < 5{
+            user.incrementKey("ItemsToday", byAmount: 1)
+            user.incrementKey("DiscountProgress", byAmount: 1)
+        }
         checkIfUserGotBadge(currentUser: PFUser.current()!)
         user.saveInBackground
         {(success, error) in
@@ -150,6 +158,10 @@ class InferenceViewController: UIViewController {
                 resultsVC.typeImage.image = UIImage(named: imageName) as! UIImage
                 resultsVC.revealLabel.text = "This is \(item)"
                 resultsVC.disposeLabel.text = "Dispose in the \(item) bin"
+                resultsVC.type = item
+                
+                resultsVC.setOrder()
+                
                 self.dismiss(animated: true, completion: nil)
                  
                 print("saved")
@@ -284,8 +296,8 @@ extension InferenceViewController: UITableViewDelegate, UITableViewDataSource {
     switch inferenceSection {
     case .Results:
       rowCount = maxResults
-    case .InferenceInfo:
-      rowCount = InferenceInfo.allCases.count
+//    case .InferenceInfo:
+//      rowCount = InferenceInfo.allCases.count
     }
     return rowCount
   }
@@ -301,18 +313,19 @@ extension InferenceViewController: UITableViewDelegate, UITableViewDataSource {
     switch inferenceSection {
     case .Results:
       if indexPath.row == maxResults - 1 {
-        height = separatorCellHeight + bottomSpacing
+//        height = separatorCellHeight + bottomSpacing
+        height = normalCellHeight*1.5
       }
       else {
-        height = normalCellHeight
+        height = normalCellHeight*1.5
       }
-    case .InferenceInfo:
-      if indexPath.row == InferenceInfo.allCases.count - 1 {
-        height = separatorCellHeight + bottomSpacing
-      }
-      else {
-        height = normalCellHeight
-      }
+//    case .InferenceInfo:
+//      if indexPath.row == InferenceInfo.allCases.count - 1 {
+//        height = separatorCellHeight + bottomSpacing
+//      }
+//      else {
+//        height = normalCellHeight
+//      }
     }
     return height
   }
@@ -346,16 +359,18 @@ extension InferenceViewController: UITableViewDelegate, UITableViewDataSource {
         color = lightTextInfoColor
       }
 
-    case .InferenceInfo:
-      let tuple = displayStringsForInferenceInfo(atRow: indexPath.row)
-      fieldName = tuple.0
-      info = tuple.1
+//    case .InferenceInfo:
+//      let tuple = displayStringsForInferenceInfo(atRow: indexPath.row)
+//      fieldName = tuple.0
+//      info = tuple.1
 
     }
     cell.fieldNameLabel.font = font
     cell.fieldNameLabel.textColor = color
     cell.fieldNameLabel.text = fieldName
     cell.infoLabel.text = info
+    cell.infoLabel.font = font
+    
     return cell
   }
 
@@ -397,32 +412,32 @@ extension InferenceViewController: UITableViewDelegate, UITableViewDataSource {
   /**
    This method formats the display of additional information relating to the inferences.
    */
-  func displayStringsForInferenceInfo(atRow row: Int) -> (String, String) {
-
-    var fieldName: String = ""
-    var info: String = ""
-
-    guard let inferenceInfo = InferenceInfo(rawValue: row) else {
-      return (fieldName, info)
-    }
-
-    fieldName = inferenceInfo.displayString()
-
-    switch inferenceInfo {
-    case .Resolution:
-      info = "\(Int(resolution.width))x\(Int(resolution.height))"
-    case .Crop:
-      info = "\(wantedInputWidth)x\(wantedInputHeight)"
-    case .InferenceTime:
-      guard let finalResults = inferenceResult else {
-        info = "0ms"
-        break
-      }
-      info = String(format: "%.2fms", finalResults.inferenceTime)
-    }
-
-    return(fieldName, info)
-  }
+//  func displayStringsForInferenceInfo(atRow row: Int) -> (String, String) {
+//
+//    var fieldName: String = ""
+//    var info: String = ""
+//
+//    guard let inferenceInfo = InferenceInfo(rawValue: row) else {
+//      return (fieldName, info)
+//    }
+//
+//    fieldName = inferenceInfo.displayString()
+//
+//    switch inferenceInfo {
+//    case .Resolution:
+//      info = "\(Int(resolution.width))x\(Int(resolution.height))"
+//    case .Crop:
+//      info = "\(wantedInputWidth)x\(wantedInputHeight)"
+//    case .InferenceTime:
+//      guard let finalResults = inferenceResult else {
+//        info = "0ms"
+//        break
+//      }
+//      info = String(format: "%.2fms", finalResults.inferenceTime)
+//    }
+//
+//    return(fieldName, info)
+//  }
     
 }
 

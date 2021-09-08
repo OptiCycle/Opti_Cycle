@@ -269,9 +269,9 @@ class FindFriendsViewController: UIViewController, UITableViewDelegate, UITableV
                         
                         cell.profilePicture.image = image
                         
-                        cell.profilePicture.layer.borderWidth = 2
+//                        cell.profilePicture.layer.borderWidth = 2
                         cell.profilePicture.layer.masksToBounds = false
-                        cell.profilePicture.layer.borderColor = UIColor.green.cgColor
+//                        cell.profilePicture.layer.borderColor = UIColor.green.cgColor
                         cell.profilePicture.layer.cornerRadius = cell.profilePicture.frame.height/2
                         cell.profilePicture.clipsToBounds = true
 

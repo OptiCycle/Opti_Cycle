@@ -14,6 +14,7 @@ import UIKit
 import Parse
 import MBCircularProgressBar
 
+
 class OtherUserProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var profilePicture: UIImageView!
@@ -76,7 +77,6 @@ class OtherUserProfileViewController: UIViewController, UICollectionViewDelegate
                         
                         self.profilePicture.image = image
                         
-                        self.profilePicture.layer.borderWidth = 2
                         self.profilePicture.layer.masksToBounds = false
                         self.profilePicture.layer.borderColor = UIColor.black.cgColor
                         self.profilePicture.layer.cornerRadius = self.profilePicture.frame.height/2
@@ -266,14 +266,17 @@ class OtherUserProfileViewController: UIViewController, UICollectionViewDelegate
         if currentBadge[indexPath.row] {
             print("in here")
             cell.badgeImageView.image = (badges[indexPath.row]["badgeImage"] as! UIImage)
+            cell.badgeImageView.image = (badges[indexPath.row]["badgeImage"] as! UIImage)
+            cell.badgeImageView.layer.borderColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
+            cell.badgeLabel.textColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0)
         }
         else {
-            cell.badgeImageView.image = UIImage(named: "lockedBadge")
+            cell.badgeImageView.image = UIImage(named: "lockedBadge")?.noir
+            cell.badgeLabel.textColor = .lightGray
         }
         cell.badgeImageView.backgroundColor = UIColor.darkGray
         cell.badgeImageView.layer.borderWidth = 2
         cell.badgeImageView.layer.masksToBounds = false
-        cell.badgeImageView.layer.borderColor = UIColor(red: 137/255.0, green: 229/255.0, blue: 158/255.0, alpha: 1.0).cgColor
         cell.badgeImageView.layer.cornerRadius = cell.badgeImageView.frame.height/2
         cell.badgeImageView.clipsToBounds = true
         

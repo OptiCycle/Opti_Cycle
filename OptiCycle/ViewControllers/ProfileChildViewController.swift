@@ -25,15 +25,14 @@ class ProfileChildViewController: UIViewController, UIImagePickerControllerDeleg
         
         profileImage.layer.masksToBounds = false
         profileImage.layer.cornerRadius = profileImage.frame.height/2
-        profileImage.layer.borderWidth = 3.0
         profileImage.clipsToBounds = true
         profileImage.layer.borderColor = UIColor.black.cgColor
         
         editProfilePenImage.layer.masksToBounds = false
-        editProfilePenImage.layer.cornerRadius = editProfilePenImage.frame.height/2
-        editProfilePenImage.layer.borderWidth = 2.0
+        editProfilePenImage.layer.cornerRadius = editProfilePenImage.frame.width/1.2
+//        editProfilePenImage.layer.borderWidth = 2.0
         editProfilePenImage.clipsToBounds = true
-        editProfilePenImage.layer.borderColor = UIColor.black.cgColor
+//        editProfilePenImage.layer.borderColor = UIColor.black.cgColor
     
     }
     
