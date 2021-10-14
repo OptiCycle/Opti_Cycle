@@ -29,6 +29,11 @@ Here's a walkthrough of all initial features and aesthetics:
 
 https://user-images.githubusercontent.com/44587335/116011356-937c5600-a5f2-11eb-85fe-9cc47c0ad687.mp4
 
+ ### Part 3
+Here's our final project presentation for Code Path's National App Competition:
+
+https://www.youtube.com/watch?v=nXIwYlUEtio
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
